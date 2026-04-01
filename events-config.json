@@ -1,11 +1,16 @@
 {
-  "name": "QCW Country Fair",
-  "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
-  "confirmed_url": "https://www.bikereg.com/Confirmed/74430"
-}
+  "team_names": ["CS Velo", "CS VELO"],
+  "events": [
+    {
+    "name": "QCW Country Fair",
+    "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
+    "confirmed_url": "https://www.bikereg.com/Confirmed/74430"
+    }
 
-{
-  "name": "QCW Spring Classic",
-  "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
-  "confirmed_url": "https://www.bikereg.com/Confirmed/72955"
+    {
+      "name": "QCW Spring Classic",
+      "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/72955"
+    }
+  ]
 }
