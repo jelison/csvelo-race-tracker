@@ -9,21 +9,3 @@
     "playwright": "^1.44.0"
   }
 }
-```
-
-**File 2:** filename is `.github/workflows/scrape.yml` — type it exactly like that with the dot at the start, and GitHub will create the folders automatically.
-
-Paste the contents from the `scrape.yml` file you downloaded earlier.
-
----
-
-Once both are committed, your repo structure should look like this on GitHub:
-```
-csvelo-race-tracker/
-├── .github/
-│   └── workflows/
-│       └── scrape.yml
-├── scraper/
-│   └── scrape.js
-├── events-config.json
-└── package.json
