@@ -1,18 +1,15 @@
 name: Scrape BikeReg Registrants
 
 on:
-  # Run every 6 hours
   schedule:
     - cron: '0 */6 * * *'
-
-  # Allow manual trigger from the GitHub Actions UI
   workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # needed to commit data files back to the repo
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -37,7 +34,6 @@ jobs:
           git config --local user.name  "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          # Only commit if there are actual changes
           if git diff --cached --quiet; then
             echo "No changes to commit — data is up to date."
           else
