@@ -1,4 +1,15 @@
 {
-  "events": [],
-  "generated_at": "2026-04-02T22:49:57.719Z"
+  "events": [
+    {
+      "slug": "74430",
+      "filename": "74430.json",
+      "event_name": "QCW Country Fair",
+      "event_date": null,
+      "event_location": "ABOUT US  EVENT CALENDARS  RESULTS  SUPPORT  SIGN IN \n \nQCW Country Fair\nSun April 12, 2026\nBordentown, NJ\n EVENT WEBSITE  GET DIRECTIONS  ADD TO CALENDAR  SAVE EVENT\nREGISTER NOTES LOCATION & CONTACT WHO'S REGISTERED? RACE PREDICTOR\nWho's Registered\nTotal Event Registrations: 35\n\nCLEAR SEARCH | EXPAND ALL | COLLAPSE ALL\n\n1 entry\n+\nMasters Men 60+\n11 entries\n+\nMen Category 4/5\n1 entry\n+\nWomen Category 4/5\n6 entries\n+\nMasters Men Category 50+\n6 entries\n+\nMen Category 3/4\n5 entries\n+\nMasters men 40+\n3 entries\n+\nMen Category 2/3\n2 entries\n+\nMen Category 1/2/3",
+      "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-02T23:00:02.127Z"
+    }
+  ],
+  "generated_at": "2026-04-02T23:00:02.174Z"
 }
