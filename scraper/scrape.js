@@ -1,6 +1,6 @@
 /**
- * CS Velo — BikeReg Confirmed Registrant Scraper v2
- * Handles BikeReg's per-category table structure
+ * CS Velo — BikeReg Confirmed Registrant Scraper v3
+ * Clicks "EXPAND ALL" to reveal collapsed category sections before scraping.
  */
 
 const { chromium } = require('playwright');
@@ -10,7 +10,7 @@ const path = require('path');
 const CONFIG_PATH = path.join(__dirname, '..', 'events-config.json');
 const DATA_DIR    = path.join(__dirname, '..', 'data');
 
-const config = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
+const config     = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
 const TEAM_MATCH = config.team_names.map(n => n.toLowerCase().trim());
 
 function eventSlug(event) {
@@ -28,11 +28,29 @@ async function scrapeEvent(browser, event) {
 
   try {
     await page.goto(event.confirmed_url, { waitUntil: 'domcontentloaded', timeout: 45000 });
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(2000);
 
-    // Log a sample of the page text to help debug structure
-    const pageTextSample = await page.evaluate(() => document.body.innerText.slice(0, 2000));
-    console.log('  Page sample:\n' + pageTextSample.slice(0, 600));
+    // ── Click "EXPAND ALL" to reveal all collapsed category sections ──────
+    const expanded = await page.evaluate(() => {
+      const links = Array.from(document.querySelectorAll('a, button, span'));
+      const expandBtn = links.find(el => el.innerText && el.innerText.trim().toUpperCase() === 'EXPAND ALL');
+      if (expandBtn) { expandBtn.click(); return true; }
+      return false;
+    });
+
+    if (expanded) {
+      console.log('  ✓ Clicked EXPAND ALL — waiting for sections to render...');
+      await page.waitForTimeout(3000);
+    } else {
+      console.log('  ⚠️  EXPAND ALL button not found — trying to expand sections individually...');
+      // Fallback: click every collapsed section toggle
+      await page.evaluate(() => {
+        document.querySelectorAll('a, button, span').forEach(el => {
+          if (el.innerText && el.innerText.trim() === '+') el.click();
+        });
+      });
+      await page.waitForTimeout(3000);
+    }
 
     const result = await page.evaluate((cfg) => {
       const TEAM_MATCH_JS = cfg._teamMatchLower;
@@ -56,14 +74,11 @@ async function scrapeEvent(browser, event) {
       const eventDate     = getText('[class*="date"]', 'time') || null;
       const eventLocation = getText('[class*="location"]', '[class*="venue"]') || null;
 
-      // Grab ALL tables
-      const tables = Array.from(document.querySelectorAll('table'));
-
+      const tables     = Array.from(document.querySelectorAll('table'));
       const debugTables = tables.map((t, i) => ({
         index: i,
         rows: t.querySelectorAll('tr').length,
         firstRowText: (t.querySelector('tr') || {}).innerText || '',
-        allHeaderText: Array.from(t.querySelectorAll('th, thead td')).map(h => h.innerText.trim()),
       }));
 
       const fieldMap = {};
@@ -72,14 +87,13 @@ async function scrapeEvent(browser, event) {
         const rows = Array.from(table.querySelectorAll('tr'));
         if (rows.length < 2) continue;
 
-        // Extract all cell text per row
         const parsedRows = rows.map(row => ({
           cells: Array.from(row.querySelectorAll('th, td')).map(c => c.innerText.trim()),
           isHeader: row.querySelector('th') !== null,
         }));
 
-        // Find a row that looks like a column header (contains "name" or "team")
-        let headerIdx = -1;
+        // Find column header row and field label
+        let headerIdx  = -1;
         let fieldLabel = null;
 
         for (let i = 0; i < Math.min(4, parsedRows.length); i++) {
@@ -88,13 +102,11 @@ async function scrapeEvent(browser, event) {
             headerIdx = i;
             break;
           }
-          // Treat as field label row — strip entry count noise
-          const raw = parsedRows[i].cells.join(' ');
+          const raw     = parsedRows[i].cells.join(' ');
           const cleaned = raw.replace(/\d+\s+entr(y|ies)/gi, '').replace(/\+/g, '').replace(/\s+/g, ' ').trim();
           if (cleaned.length > 2 && cleaned.length < 150) fieldLabel = cleaned;
         }
 
-        // Column indices
         let iFirst = null, iLast = null, iTeam = null, iTime = null;
 
         if (headerIdx >= 0) {
@@ -109,35 +121,22 @@ async function scrapeEvent(browser, event) {
           if (iTime  < 0) iTime  = null;
         }
 
-        // If we still don't know the team column, try to detect it by CS Velo presence
         const dataRows = parsedRows.slice(headerIdx >= 0 ? headerIdx + 1 : 1);
 
+        // Auto-detect team column if not found in headers
         if (iTeam === null) {
-          for (const row of dataRows.slice(0, 20)) {
-            row.cells.forEach((cell, idx) => {
-              if (isCSVeloJS(cell)) iTeam = idx;
-            });
-            if (iTeam !== null) break;
+          outer: for (const row of dataRows) {
+            for (let idx = 0; idx < row.cells.length; idx++) {
+              if (isCSVeloJS(row.cells[idx])) { iTeam = idx; break outer; }
+            }
           }
         }
 
-        // Still no team column? Try every cell in every row for CS Velo match
-        if (iTeam === null) {
-          for (const row of dataRows) {
-            row.cells.forEach((cell, idx) => {
-              if (isCSVeloJS(cell)) iTeam = idx;
-            });
-          }
-        }
-
-        // Process data rows
         for (const row of dataRows) {
           if (row.cells.length === 0) continue;
-
           const teamVal = iTeam !== null ? (row.cells[iTeam] || '') : '';
           if (!isCSVeloJS(teamVal)) continue;
 
-          // Build name
           let name = '';
           if (iFirst !== null && iLast !== null) {
             name = [row.cells[iFirst], row.cells[iLast]].filter(Boolean).join(' ');
@@ -146,33 +145,25 @@ async function scrapeEvent(browser, event) {
           } else if (iFirst !== null) {
             name = row.cells[iFirst] || '';
           } else {
-            // Fallback: use all non-team, non-numeric cells
             name = row.cells.filter((c, i) => i !== iTeam && isNaN(c) && c.length > 1).join(' ');
           }
 
           const timeVal = iTime !== null ? (row.cells[iTime] || '') : '';
-          const key = fieldLabel || 'General';
+          const key     = fieldLabel || 'General';
 
           if (!fieldMap[key]) fieldMap[key] = { field: key, time: timeVal || null, riders: [] };
-          if (name && !fieldMap[key].riders.includes(name)) {
-            fieldMap[key].riders.push(name);
-          }
+          if (name && !fieldMap[key].riders.includes(name)) fieldMap[key].riders.push(name);
           if (!fieldMap[key].time && timeVal) fieldMap[key].time = timeVal;
         }
       }
 
-      const fields = Object.values(fieldMap).map(f => ({ ...f, cs_velo_count: f.riders.length }));
+      const fields      = Object.values(fieldMap).map(f => ({ ...f, cs_velo_count: f.riders.length }));
       const totalCSVelo = fields.reduce((sum, f) => sum + f.cs_velo_count, 0);
 
       return {
-        event_name: eventName,
-        event_date: eventDate,
-        event_location: eventLocation,
-        bikereg_url: cfg.bikereg_url,
-        confirmed_url: cfg.confirmed_url,
-        total_cs_velo: totalCSVelo,
-        fields,
-        scraped_at: new Date().toISOString(),
+        event_name: eventName, event_date: eventDate, event_location: eventLocation,
+        bikereg_url: cfg.bikereg_url, confirmed_url: cfg.confirmed_url,
+        total_cs_velo: totalCSVelo, fields, scraped_at: new Date().toISOString(),
         debug: { tableCount: tables.length, tables: debugTables },
       };
 
@@ -180,9 +171,10 @@ async function scrapeEvent(browser, event) {
 
     console.log(`  Tables found: ${result.debug.tableCount}`);
     result.debug.tables.forEach(t => {
-      console.log(`    Table ${t.index}: ${t.rows} rows | first row: "${t.firstRowText.slice(0,80)}"`);
+      console.log(`    Table ${t.index}: ${t.rows} rows | "${t.firstRowText.slice(0, 60).replace(/\n/g,' ')}"`);
     });
     console.log(`  ✓ ${result.total_cs_velo} CS Velo rider(s) in ${result.fields.length} field(s)`);
+    if (result.fields.length) result.fields.forEach(f => console.log(`    - ${f.field}: ${f.riders.join(', ')}`));
 
     return result;
 
