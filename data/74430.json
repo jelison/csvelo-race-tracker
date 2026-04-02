@@ -1,78 +1,103 @@
 {
   "event_name": "QCW Country Fair",
-  "event_date": null,
-  "event_location": "ABOUT US  EVENT CALENDARS  RESULTS  SUPPORT  SIGN IN \n \nQCW Country Fair\nSun April 12, 2026\nBordentown, NJ\n EVENT WEBSITE  GET DIRECTIONS  ADD TO CALENDAR  SAVE EVENT\nREGISTER NOTES LOCATION & CONTACT WHO'S REGISTERED? RACE PREDICTOR\nWho's Registered\nTotal Event Registrations: 35\n\nCLEAR SEARCH | EXPAND ALL | COLLAPSE ALL\n\n1 entry\n+\nMasters Men 60+\n11 entries\n+\nMen Category 4/5\n1 entry\n+\nWomen Category 4/5\n6 entries\n+\nMasters Men Category 50+\n6 entries\n+\nMen Category 3/4\n5 entries\n+\nMasters men 40+\n3 entries\n+\nMen Category 2/3\n2 entries\n+\nMen Category 1/2/3",
+  "event_date": "DATE\nENTERED",
+  "event_location": "ABOUT US  EVENT CALENDARS  RESULTS  SUPPORT  SIGN IN \n \nQCW Country Fair\nSun April 12, 2026\nBordentown, NJ\n EVENT WEBSITE  GET DIRECTIONS  ADD TO CALENDAR  SAVE EVENT\nREGISTER NOTES LOCATION & CONTACT WHO'S REGISTERED? RACE PREDICTOR\nWho's Registered\nTotal Event Registrations: 35\n\nCLEAR SEARCH | EXPAND ALL | COLLAPSE ALL\n\n1 entry\n-\nMasters Men 60+\nFIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED\n\nChristopher\tRassekh\tLafayette Hill\tPA\t\n \n\t4/02\n11 entries\n-\nMen Category 4/5\nFIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED\n\nRyan\tBarr\tHaddon Township\tNJ\t\nQCW P/B Cadence Cycling\n\t3/27\nTim\tBrown\tWilmington\tDE\t\nWatts & Whiskey\n\t4/02\nColin\tEly\tPhiladelphia\tPA\t\nSOAR Foundation Racing\n\t2/13\nPeter\tGargalovic\tNewtown\tPA\t\nWatts & Whiskey\n\t2/08\nLuis\tGuinand\tPhiladelphia\tPA\t\nQCW p/b Cadence Cycling\n\t3/27\nShawn\tKaplan\tNewtown\tPA\t\nWatts & Whiskey\n\t2/01\nTomas\tQuiceno\tSouthampton\tPA\t\nWatts & Whiskey\n\t2/08\ncorey\trenier\tPhiladelphia\tPA\t\n \n\t3/24\nJoshua\tSmith\tNewtown\tPA\t\nWatts & Whiskey\n\t3/23\nJoel\tTravis\tPhiladelphia\tPA\t\nQCW p/b Cadence Cycling\n\t4/02\nDarinel\tUreña\tBowie\tMD\t\nDMV Caribbean Ridazz\n\t3/13\n1 entry\n-\nWomen Category 4/5\nFIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED\n\nKimberly\tCian-Screnci\tPhiladelphia\tPA\t\nQCW Cycling\n\t3/27\n6 entries\n-\nMasters Men Category 50+\nFIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED\n\nPeter\tGargalovic\tNewtown\tPA\t\nWatts & Whiskey\n\t3/23\nMatthew\tHarrington\tChester Springs\tPA\t\nBigfoot Endurance Racing Team p/b TREK\n\t4/01\nJohn\tRachfal\tArdmore\tPA\t\nCS VELO\n\t4/02\nChristopher\tRassekh\tLafayette Hill\tPA\t\n \n\t4/02\nJon-Paul\tRorech\tBrooklyn\tNY\t\nBurrowes Brothers Bikes\n\t3/23\nJustin\tWheeler\tVillanova\tPA\t\nBigfoot Endurance Racing Team p/b TREK\n\t4/02\n6 entries\n-\nMen Category 3/4\nFIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED\n\nTim\tBrown\tWilmington\tDE\t\nWatts & Whiskey\n\t4/02\nColin\tEly\tPhiladelphia\tPA\t\nSOAR Foundation Racing\n\t2/13\nLuis\tGuinand\tPhiladelphia\tPA\t\nQCW p/b Cadence Cycling\n\t3/27\nTomas\tQuiceno\tSouthampton\tPA\t\nWatts & Whiskey\n\t4/02\nDavid\tSpeaks\tBloomsburg\tPA\t\nBike Works p/b Fred Beans\n\t3/30\nJoel\tTravis\tPhiladelphia\tPA\t\nQCW p/b Cadence Cycling\n\t4/02\n5 entries\n-\nMasters men 40+\nFIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED\n\nJohn\tRachfal\tArdmore\tPA\t\nCS VELO\n\t4/02\nJon-Paul\tRorech\tBrooklyn\tNY\t\nBurrowes Brothers Bikes\n\t3/23\nJustin\tWheeler\tVillanova\tPA\t\nBigfoot Endurance Racing Team p/b TREK\n\t4/02\nSean\tWhiteman\tPhiladelphia\tPA\t\nQCW p/b Cadence Cycling\n\t3/27\nEric\tWilliams\tPhiladelphia\tPA\t\nQCW P/B Cadence Cycling\n\t3/27\n3 entries\n-\nMen Category 2/3\nFIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED\n\nGaocheng\tLiu\tSwarthmore\tPA\t\nQCW P/B Cadence Cycling\n\t3/27\nRoss\tNickerson\tPhiladelphia\tPA\t\nQCW P/B Cadence Cycling\n\t3/27\nSean\tWhiteman\tPhiladelphia\tPA\t\nQCW p/b Cadence Cycling\n\t3/27\n2 entries\n-\nMen Category 1/2/3\nFIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED\n\nGaocheng\tLiu\tSwarthmore\tPA\t\nQCW P/B Cadence Cycling\n\t3/27\nAaron\tRitz\tPhiladelphia\tPA\t\n \n\t4/02",
   "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74430",
-  "total_cs_velo": 0,
-  "fields": [],
-  "scraped_at": "2026-04-02T23:00:02.127Z",
+  "total_cs_velo": 1,
+  "fields": [
+    {
+      "field": "General",
+      "time": null,
+      "riders": [
+        "John Rachfal"
+      ],
+      "cs_velo_count": 1
+    }
+  ],
+  "scraped_at": "2026-04-02T23:11:35.903Z",
   "debug": {
-    "tableCount": 8,
+    "tableCount": 16,
     "tables": [
       {
         "index": 0,
         "rows": 1,
-        "firstRowText": "1 entry\n+\nMasters Men 60+",
-        "allHeaderText": [
-          "1 entry\n+\nMasters Men 60+"
-        ]
+        "firstRowText": "1 entry\n-\nMasters Men 60+"
       },
       {
         "index": 1,
-        "rows": 1,
-        "firstRowText": "11 entries\n+\nMen Category 4/5",
-        "allHeaderText": [
-          "11 entries\n+\nMen Category 4/5"
-        ]
+        "rows": 2,
+        "firstRowText": "FIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED"
       },
       {
         "index": 2,
         "rows": 1,
-        "firstRowText": "1 entry\n+\nWomen Category 4/5",
-        "allHeaderText": [
-          "1 entry\n+\nWomen Category 4/5"
-        ]
+        "firstRowText": "11 entries\n-\nMen Category 4/5"
       },
       {
         "index": 3,
-        "rows": 1,
-        "firstRowText": "6 entries\n+\nMasters Men Category 50+",
-        "allHeaderText": [
-          "6 entries\n+\nMasters Men Category 50+"
-        ]
+        "rows": 12,
+        "firstRowText": "FIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED"
       },
       {
         "index": 4,
         "rows": 1,
-        "firstRowText": "6 entries\n+\nMen Category 3/4",
-        "allHeaderText": [
-          "6 entries\n+\nMen Category 3/4"
-        ]
+        "firstRowText": "1 entry\n-\nWomen Category 4/5"
       },
       {
         "index": 5,
-        "rows": 1,
-        "firstRowText": "5 entries\n+\nMasters men 40+",
-        "allHeaderText": [
-          "5 entries\n+\nMasters men 40+"
-        ]
+        "rows": 2,
+        "firstRowText": "FIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED"
       },
       {
         "index": 6,
         "rows": 1,
-        "firstRowText": "3 entries\n+\nMen Category 2/3",
-        "allHeaderText": [
-          "3 entries\n+\nMen Category 2/3"
-        ]
+        "firstRowText": "6 entries\n-\nMasters Men Category 50+"
       },
       {
         "index": 7,
+        "rows": 7,
+        "firstRowText": "FIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED"
+      },
+      {
+        "index": 8,
         "rows": 1,
-        "firstRowText": "2 entries\n+\nMen Category 1/2/3",
-        "allHeaderText": [
-          "2 entries\n+\nMen Category 1/2/3"
-        ]
+        "firstRowText": "6 entries\n-\nMen Category 3/4"
+      },
+      {
+        "index": 9,
+        "rows": 7,
+        "firstRowText": "FIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED"
+      },
+      {
+        "index": 10,
+        "rows": 1,
+        "firstRowText": "5 entries\n-\nMasters men 40+"
+      },
+      {
+        "index": 11,
+        "rows": 6,
+        "firstRowText": "FIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED"
+      },
+      {
+        "index": 12,
+        "rows": 1,
+        "firstRowText": "3 entries\n-\nMen Category 2/3"
+      },
+      {
+        "index": 13,
+        "rows": 4,
+        "firstRowText": "FIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED"
+      },
+      {
+        "index": 14,
+        "rows": 1,
+        "firstRowText": "2 entries\n-\nMen Category 1/2/3"
+      },
+      {
+        "index": 15,
+        "rows": 3,
+        "firstRowText": "FIRST\n\t\nLAST\n\t\nCITY\n\t\nST\n\t\nTEAM\n\t\nDATE\nENTERED"
       }
     ]
   }
