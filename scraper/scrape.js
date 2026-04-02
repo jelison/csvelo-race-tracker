@@ -1,6 +1,12 @@
 /**
- * CS Velo — BikeReg Confirmed Registrant Scraper v3
- * Clicks "EXPAND ALL" to reveal collapsed category sections before scraping.
+ * CS Velo — BikeReg Confirmed Registrant Scraper v4
+ *
+ * BikeReg's confirmed page uses alternating table pairs:
+ *   Table N   = category label row  ("6 entries - Masters Men 40+")
+ *   Table N+1 = rider data rows     (FIRST | LAST | CITY | ST | TEAM | DATE)
+ *
+ * We click EXPAND ALL, then walk tables in pairs to associate each
+ * data table with its category label from the preceding table.
  */
 
 const { chromium } = require('playwright');
@@ -30,38 +36,27 @@ async function scrapeEvent(browser, event) {
     await page.goto(event.confirmed_url, { waitUntil: 'domcontentloaded', timeout: 45000 });
     await page.waitForTimeout(2000);
 
-    // ── Click "EXPAND ALL" to reveal all collapsed category sections ──────
+    // Click EXPAND ALL to reveal all collapsed category sections
     const expanded = await page.evaluate(() => {
-      const links = Array.from(document.querySelectorAll('a, button, span'));
-      const expandBtn = links.find(el => el.innerText && el.innerText.trim().toUpperCase() === 'EXPAND ALL');
-      if (expandBtn) { expandBtn.click(); return true; }
+      const all = Array.from(document.querySelectorAll('a, button, span'));
+      const btn = all.find(el => el.innerText && el.innerText.trim().toUpperCase() === 'EXPAND ALL');
+      if (btn) { btn.click(); return true; }
       return false;
     });
 
-    if (expanded) {
-      console.log('  ✓ Clicked EXPAND ALL — waiting for sections to render...');
-      await page.waitForTimeout(3000);
-    } else {
-      console.log('  ⚠️  EXPAND ALL button not found — trying to expand sections individually...');
-      // Fallback: click every collapsed section toggle
-      await page.evaluate(() => {
-        document.querySelectorAll('a, button, span').forEach(el => {
-          if (el.innerText && el.innerText.trim() === '+') el.click();
-        });
-      });
-      await page.waitForTimeout(3000);
-    }
+    console.log(expanded ? '  ✓ Clicked EXPAND ALL' : '  ⚠️  EXPAND ALL not found');
+    await page.waitForTimeout(3000);
 
     const result = await page.evaluate((cfg) => {
       const TEAM_MATCH_JS = cfg._teamMatchLower;
 
-      function isCSVeloJS(str) {
+      function isCSVelo(str) {
         if (!str) return false;
         const v = str.toLowerCase().trim();
         return TEAM_MATCH_JS.some(t => v === t || v.includes(t));
       }
 
-      // Event metadata
+      // ── Event metadata ──────────────────────────────────────────────────
       const getText = (...sels) => {
         for (const s of sels) {
           const el = document.querySelector(s);
@@ -74,86 +69,91 @@ async function scrapeEvent(browser, event) {
       const eventDate     = getText('[class*="date"]', 'time') || null;
       const eventLocation = getText('[class*="location"]', '[class*="venue"]') || null;
 
-      const tables     = Array.from(document.querySelectorAll('table'));
-      const debugTables = tables.map((t, i) => ({
-        index: i,
-        rows: t.querySelectorAll('tr').length,
-        firstRowText: (t.querySelector('tr') || {}).innerText || '',
-      }));
+      // ── Parse all tables ────────────────────────────────────────────────
+      const tables = Array.from(document.querySelectorAll('table'));
 
-      const fieldMap = {};
-
-      for (const table of tables) {
+      // Classify each table as either a LABEL table or a DATA table
+      const classified = tables.map(table => {
         const rows = Array.from(table.querySelectorAll('tr'));
-        if (rows.length < 2) continue;
+        if (rows.length === 0) return { type: 'empty' };
 
-        const parsedRows = rows.map(row => ({
-          cells: Array.from(row.querySelectorAll('th, td')).map(c => c.innerText.trim()),
-          isHeader: row.querySelector('th') !== null,
-        }));
+        const firstRowText = rows[0].innerText.trim();
+        const allCellText  = Array.from(rows[0].querySelectorAll('th, td'))
+          .map(c => c.innerText.trim().toLowerCase());
 
-        // Find column header row and field label
-        let headerIdx  = -1;
-        let fieldLabel = null;
+        // A DATA table: first row has column headers (FIRST, LAST, TEAM, etc.)
+        const isDataHeader =
+          allCellText.some(t => t.includes('first') || t.includes('last') || t.includes('name')) &&
+          allCellText.some(t => t.includes('team') || t.includes('club'));
 
-        for (let i = 0; i < Math.min(4, parsedRows.length); i++) {
-          const lower = parsedRows[i].cells.map(c => c.toLowerCase());
-          if (lower.some(c => c.includes('name') || c.includes('first') || c.includes('last'))) {
-            headerIdx = i;
-            break;
+        if (isDataHeader) {
+          // Parse column indices
+          const iFirst = allCellText.findIndex(t => t.includes('first'));
+          const iLast  = allCellText.findIndex(t => t.includes('last') || (t.includes('name') && !t.includes('first')));
+          const iTeam  = allCellText.findIndex(t => t.includes('team') || t.includes('club'));
+          const iTime  = allCellText.findIndex(t => t.includes('time') || t.includes('start'));
+
+          const riders = [];
+          for (const row of rows.slice(1)) {
+            const cells = Array.from(row.querySelectorAll('td')).map(c => c.innerText.trim());
+            if (cells.length === 0) continue;
+
+            const teamVal = iTeam >= 0 ? (cells[iTeam] || '') : '';
+            if (!isCSVelo(teamVal)) continue;
+
+            let name = '';
+            if (iFirst >= 0 && iLast >= 0) {
+              name = [cells[iFirst], cells[iLast]].filter(Boolean).join(' ');
+            } else if (iLast >= 0) {
+              name = cells[iLast] || '';
+            } else if (iFirst >= 0) {
+              name = cells[iFirst] || '';
+            }
+
+            const timeVal = iTime >= 0 ? (cells[iTime] || '') : '';
+            if (name) riders.push({ name: name.trim(), time: timeVal });
           }
-          const raw     = parsedRows[i].cells.join(' ');
-          const cleaned = raw.replace(/\d+\s+entr(y|ies)/gi, '').replace(/\+/g, '').replace(/\s+/g, ' ').trim();
-          if (cleaned.length > 2 && cleaned.length < 150) fieldLabel = cleaned;
+
+          return { type: 'data', riders };
         }
 
-        let iFirst = null, iLast = null, iTeam = null, iTime = null;
+        // A LABEL table: single row with category name + entry count
+        const cleaned = firstRowText
+          .replace(/\d+\s+entr(y|ies)/gi, '')
+          .replace(/[-+]/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
 
-        if (headerIdx >= 0) {
-          const h = parsedRows[headerIdx].cells.map(c => c.toLowerCase());
-          iFirst = h.findIndex(c => c.includes('first'));
-          iLast  = h.findIndex(c => c.includes('last') || (c.includes('name') && !c.includes('first')));
-          iTeam  = h.findIndex(c => c.includes('team') || c.includes('club'));
-          iTime  = h.findIndex(c => c.includes('time') || c.includes('start'));
-          if (iFirst < 0) iFirst = null;
-          if (iLast  < 0) iLast  = null;
-          if (iTeam  < 0) iTeam  = null;
-          if (iTime  < 0) iTime  = null;
+        if (cleaned.length > 1 && cleaned.length < 150 && rows.length <= 2) {
+          return { type: 'label', label: cleaned };
         }
 
-        const dataRows = parsedRows.slice(headerIdx >= 0 ? headerIdx + 1 : 1);
+        return { type: 'unknown' };
+      });
 
-        // Auto-detect team column if not found in headers
-        if (iTeam === null) {
-          outer: for (const row of dataRows) {
-            for (let idx = 0; idx < row.cells.length; idx++) {
-              if (isCSVeloJS(row.cells[idx])) { iTeam = idx; break outer; }
+      // ── Associate label tables with their following data tables ─────────
+      const fieldMap = {};
+      let currentLabel = 'General';
+
+      for (const t of classified) {
+        if (t.type === 'label') {
+          currentLabel = t.label;
+        } else if (t.type === 'data' && t.riders.length > 0) {
+          if (!fieldMap[currentLabel]) {
+            fieldMap[currentLabel] = {
+              field: currentLabel,
+              time:  t.riders[0].time || null,
+              riders: [],
+            };
+          }
+          for (const r of t.riders) {
+            if (!fieldMap[currentLabel].riders.includes(r.name)) {
+              fieldMap[currentLabel].riders.push(r.name);
+            }
+            if (!fieldMap[currentLabel].time && r.time) {
+              fieldMap[currentLabel].time = r.time;
             }
           }
-        }
-
-        for (const row of dataRows) {
-          if (row.cells.length === 0) continue;
-          const teamVal = iTeam !== null ? (row.cells[iTeam] || '') : '';
-          if (!isCSVeloJS(teamVal)) continue;
-
-          let name = '';
-          if (iFirst !== null && iLast !== null) {
-            name = [row.cells[iFirst], row.cells[iLast]].filter(Boolean).join(' ');
-          } else if (iLast !== null) {
-            name = row.cells[iLast] || '';
-          } else if (iFirst !== null) {
-            name = row.cells[iFirst] || '';
-          } else {
-            name = row.cells.filter((c, i) => i !== iTeam && isNaN(c) && c.length > 1).join(' ');
-          }
-
-          const timeVal = iTime !== null ? (row.cells[iTime] || '') : '';
-          const key     = fieldLabel || 'General';
-
-          if (!fieldMap[key]) fieldMap[key] = { field: key, time: timeVal || null, riders: [] };
-          if (name && !fieldMap[key].riders.includes(name)) fieldMap[key].riders.push(name);
-          if (!fieldMap[key].time && timeVal) fieldMap[key].time = timeVal;
         }
       }
 
@@ -161,20 +161,22 @@ async function scrapeEvent(browser, event) {
       const totalCSVelo = fields.reduce((sum, f) => sum + f.cs_velo_count, 0);
 
       return {
-        event_name: eventName, event_date: eventDate, event_location: eventLocation,
-        bikereg_url: cfg.bikereg_url, confirmed_url: cfg.confirmed_url,
-        total_cs_velo: totalCSVelo, fields, scraped_at: new Date().toISOString(),
-        debug: { tableCount: tables.length, tables: debugTables },
+        event_name:     eventName,
+        event_date:     eventDate,
+        event_location: eventLocation,
+        bikereg_url:    cfg.bikereg_url,
+        confirmed_url:  cfg.confirmed_url,
+        total_cs_velo:  totalCSVelo,
+        fields,
+        scraped_at:     new Date().toISOString(),
+        debug: { tableCount: tables.length, classified: classified.map(t => ({ type: t.type, label: t.label, riderCount: t.riders ? t.riders.length : undefined })) },
       };
 
     }, { ...event, _teamMatchLower: TEAM_MATCH });
 
-    console.log(`  Tables found: ${result.debug.tableCount}`);
-    result.debug.tables.forEach(t => {
-      console.log(`    Table ${t.index}: ${t.rows} rows | "${t.firstRowText.slice(0, 60).replace(/\n/g,' ')}"`);
-    });
-    console.log(`  ✓ ${result.total_cs_velo} CS Velo rider(s) in ${result.fields.length} field(s)`);
-    if (result.fields.length) result.fields.forEach(f => console.log(`    - ${f.field}: ${f.riders.join(', ')}`));
+    console.log(`  Tables: ${result.debug.tableCount} total`);
+    console.log(`  ✓ ${result.total_cs_velo} CS Velo rider(s) across ${result.fields.length} field(s):`);
+    result.fields.forEach(f => console.log(`    - ${f.field}: ${f.riders.join(', ')}`));
 
     return result;
 
@@ -202,9 +204,15 @@ async function main() {
     fs.writeFileSync(path.join(DATA_DIR, filename), JSON.stringify(data, null, 2));
     console.log(`  → Wrote data/${filename}`);
 
-    index.push({ slug, filename, event_name: data.event_name, event_date: data.event_date,
-      event_location: data.event_location, bikereg_url: data.bikereg_url,
-      total_cs_velo: data.total_cs_velo, scraped_at: data.scraped_at });
+    index.push({
+      slug, filename,
+      event_name:     data.event_name,
+      event_date:     data.event_date,
+      event_location: data.event_location,
+      bikereg_url:    data.bikereg_url,
+      total_cs_velo:  data.total_cs_velo,
+      scraped_at:     data.scraped_at,
+    });
   }
 
   await browser.close();
