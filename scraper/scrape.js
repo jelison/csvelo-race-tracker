@@ -1,5 +1,5 @@
 /**
- * CS Velo — BikeReg Confirmed Registrant Scraper v4
+ * CS Velo — BikeReg Confirmed Registrant Scraper v5
  *
  * BikeReg's confirmed page uses alternating table pairs:
  *   Table N   = category label row  ("6 entries - Masters Men 40+")
@@ -57,22 +57,40 @@ async function scrapeEvent(browser, event) {
       }
 
       // ── Event metadata ──────────────────────────────────────────────────
-      const getText = (...sels) => {
-        for (const s of sels) {
-          const el = document.querySelector(s);
-          if (el && el.innerText.trim()) return el.innerText.trim();
-        }
-        return null;
-      };
+      // BikeReg doesn't use semantic CSS classes for date/location.
+      // Instead, parse from the page text near the event title.
+      // The pattern is always: Event Name / Date / City, State
+      const fullText = document.body.innerText;
 
-      const eventName     = getText('h1', '.event-name') || document.title.trim() || cfg.name;
-      const eventDate     = getText('[class*="date"]', 'time') || null;
-      const eventLocation = getText('[class*="location"]', '[class*="venue"]') || null;
+      // Event name from h1
+      const h1 = document.querySelector('h1');
+      const eventName = (h1 && h1.innerText.trim()) || cfg.name;
+
+      // Date: look for pattern like "Sun April 12, 2026" or "April 12, 2026"
+      const dateMatch = fullText.match(
+        /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/
+      ) || fullText.match(
+        /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/
+      );
+      const eventDate = dateMatch ? dateMatch[0] : null;
+
+      // Location: look for "City, ST" pattern (2-letter state code) near the date
+      // Find the area of text near the date match and extract the city/state line
+      let eventLocation = null;
+      if (dateMatch) {
+        const dateIdx  = fullText.indexOf(dateMatch[0]);
+        const textNear = fullText.slice(dateIdx, dateIdx + 200);
+        // Match "City Name, ST" — state is 2 uppercase letters
+        const locMatch = textNear.match(/([A-Za-z\s]+),\s+([A-Z]{2})\b/);
+        if (locMatch) eventLocation = locMatch[0].trim();
+      }
+
+      console.log('Extracted date:', eventDate);
+      console.log('Extracted location:', eventLocation);
 
       // ── Parse all tables ────────────────────────────────────────────────
       const tables = Array.from(document.querySelectorAll('table'));
 
-      // Classify each table as either a LABEL table or a DATA table
       const classified = tables.map(table => {
         const rows = Array.from(table.querySelectorAll('tr'));
         if (rows.length === 0) return { type: 'empty' };
@@ -87,7 +105,6 @@ async function scrapeEvent(browser, event) {
           allCellText.some(t => t.includes('team') || t.includes('club'));
 
         if (isDataHeader) {
-          // Parse column indices
           const iFirst = allCellText.findIndex(t => t.includes('first'));
           const iLast  = allCellText.findIndex(t => t.includes('last') || (t.includes('name') && !t.includes('first')));
           const iTeam  = allCellText.findIndex(t => t.includes('team') || t.includes('club'));
@@ -141,8 +158,8 @@ async function scrapeEvent(browser, event) {
         } else if (t.type === 'data' && t.riders.length > 0) {
           if (!fieldMap[currentLabel]) {
             fieldMap[currentLabel] = {
-              field: currentLabel,
-              time:  t.riders[0].time || null,
+              field:  currentLabel,
+              time:   t.riders[0].time || null,
               riders: [],
             };
           }
@@ -169,14 +186,13 @@ async function scrapeEvent(browser, event) {
         total_cs_velo:  totalCSVelo,
         fields,
         scraped_at:     new Date().toISOString(),
-        debug: { tableCount: tables.length, classified: classified.map(t => ({ type: t.type, label: t.label, riderCount: t.riders ? t.riders.length : undefined })) },
       };
 
     }, { ...event, _teamMatchLower: TEAM_MATCH });
 
-    console.log(`  Tables: ${result.debug.tableCount} total`);
     console.log(`  ✓ ${result.total_cs_velo} CS Velo rider(s) across ${result.fields.length} field(s):`);
     result.fields.forEach(f => console.log(`    - ${f.field}: ${f.riders.join(', ')}`));
+    console.log(`  Date: ${result.event_date} | Location: ${result.event_location}`);
 
     return result;
 
