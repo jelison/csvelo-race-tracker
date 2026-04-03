@@ -1,10 +1,34 @@
 {
   "team_names": ["CS Velo", "CS VELO", "CSVELO"],
   "events": [
+     {
+      "name": "Cherry Blossom Challenge",
+      "bikereg_url": "https://www.bikereg.com/cherry-blossom-challenge",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74815"
+    }
+    
     {
       "name": "QCW Country Fair",
       "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
       "confirmed_url": "https://www.bikereg.com/Confirmed/74430"
+    }
+
+    {
+      "name": "Steve Reed Memorial Time Trial",
+      "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
+      "confirmed_url": "https://www.bikereg.com/steve-reed-tt"
+    }
+
+    {
+      "name": "Garden State Stage Race",
+      "bikereg_url": "https://www.bikereg.com/gssr2026",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/72378"
+    }
+
+    {
+      "name": "QCW Spring Classic",
+      "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/72955"
     }
   ]
 }
