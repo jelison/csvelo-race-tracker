@@ -8,7 +8,7 @@
       "event_location": "Newark, NJ",
       "bikereg_url": "https://www.bikereg.com/cherry-blossom-challenge",
       "total_cs_velo": 4,
-      "scraped_at": "2026-04-06T03:28:58.228Z"
+      "scraped_at": "2026-04-06T07:56:45.960Z"
     },
     {
       "slug": "74430",
@@ -18,7 +18,7 @@
       "event_location": "Bordentown, NJ",
       "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
       "total_cs_velo": 2,
-      "scraped_at": "2026-04-06T03:29:04.943Z"
+      "scraped_at": "2026-04-06T07:56:52.482Z"
     },
     {
       "slug": "steve-reed-memorial-time-trial",
@@ -28,7 +28,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-06T03:29:11.129Z"
+      "scraped_at": "2026-04-06T07:56:58.636Z"
     },
     {
       "slug": "72378",
@@ -38,7 +38,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/gssr2026",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-06T03:29:16.507Z"
+      "scraped_at": "2026-04-06T07:57:03.837Z"
     },
     {
       "slug": "72955",
@@ -48,8 +48,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-06T03:29:21.775Z"
+      "scraped_at": "2026-04-06T07:57:09.032Z"
     }
   ],
-  "generated_at": "2026-04-06T03:29:21.816Z"
+  "generated_at": "2026-04-06T07:57:09.072Z"
 }
