@@ -14,7 +14,7 @@
     {
       "name": "Steve Reed Memorial Time Trial",
       "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
-      "confirmed_url": "https://www.bikereg.com/Confirmed/XXXXX"
+      "confirmed_url": "https://www.bikereg.com/Confirmed/73765"
     },
     {
       "name": "Garden State Stage Race",
@@ -25,6 +25,61 @@
       "name": "QCW Spring Classic",
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "confirmed_url": "https://www.bikereg.com/Confirmed/72955"
+    },
+    {
+      "name": "2026 Garden State Stage Race",
+      "bikereg_url": "https://www.bikereg.com/gssr2026",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/72378"
+    },
+    {
+      "name": "QCW Spring Clasic",
+      "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/72955"
+    },
+    {
+      "name": "Diamond Mountain Stage Race",
+      "bikereg_url": "https://www.bikereg.com/dmsr",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/73230"
+    },
+    {
+      "name": "Allamuchy Time Trial",
+      "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/73766"
+    },
+    {
+      "name": "Wilmington Grand Prix Monkey Hill TT",
+      "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74576"
+    },
+    {
+      "name": "Wilmington Grand Prix",
+      "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74528"
+    },
+    {
+      "name": "Pocopscon Road Race",
+      "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/75621"
+    },
+    {
+      "name": "Snickelfritz Points Crit",
+      "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74437"
+    },
+    {
+      "name": "Tour of Plainfield",
+      "bikereg_url": "https://www.bikereg.com/plainfield",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74821"
+    },
+    {
+      "name": "Easton Criterium",
+      "bikereg_url": "https://www.bikereg.com/eastoncrit",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74245"
+    },
+    {
+      "name": "Tour of Somerville",
+      "bikereg_url": "https://www.bikereg.com/tourofsomerville",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74240"
     }
   ]
 }
