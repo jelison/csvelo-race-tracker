@@ -4,8 +4,16 @@
   "event_location": "Bordentown, NJ",
   "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74430",
-  "total_cs_velo": 4,
+  "total_cs_velo": 5,
   "fields": [
+    {
+      "field": "Men Category 4/5",
+      "time": null,
+      "riders": [
+        "Johnny Archer"
+      ],
+      "cs_velo_count": 1
+    },
     {
       "field": "Masters Men Category 50",
       "time": null,
@@ -25,5 +33,5 @@
       "cs_velo_count": 2
     }
   ],
-  "scraped_at": "2026-04-08T03:21:18.562Z"
+  "scraped_at": "2026-04-08T07:47:38.041Z"
 }

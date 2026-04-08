@@ -8,7 +8,7 @@
       "event_location": "Newark, NJ",
       "bikereg_url": "https://www.bikereg.com/cherry-blossom-challenge",
       "total_cs_velo": 4,
-      "scraped_at": "2026-04-08T03:21:11.661Z"
+      "scraped_at": "2026-04-08T07:47:31.535Z"
     },
     {
       "slug": "74430",
@@ -17,8 +17,8 @@
       "event_date": "Sun April 12, 2026",
       "event_location": "Bordentown, NJ",
       "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
-      "total_cs_velo": 4,
-      "scraped_at": "2026-04-08T03:21:18.562Z"
+      "total_cs_velo": 5,
+      "scraped_at": "2026-04-08T07:47:38.041Z"
     },
     {
       "slug": "steve-reed-memorial-time-trial",
@@ -28,17 +28,17 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-08T03:21:24.838Z"
+      "scraped_at": "2026-04-08T07:47:44.247Z"
     },
     {
       "slug": "72378",
       "filename": "72378.json",
-      "event_name": "2026 Garden State Stage Race p/b Vaccaro Law",
+      "event_name": "www.bikereg.com",
       "event_date": null,
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/gssr2026",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-08T03:21:31.523Z"
+      "scraped_at": "2026-04-08T07:47:49.629Z"
     },
     {
       "slug": "72955",
@@ -48,8 +48,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-08T03:21:36.913Z"
+      "scraped_at": "2026-04-08T07:47:54.870Z"
     }
   ],
-  "generated_at": "2026-04-08T03:21:36.949Z"
+  "generated_at": "2026-04-08T07:47:54.907Z"
 }
