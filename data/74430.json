@@ -4,7 +4,7 @@
   "event_location": "Bordentown, NJ",
   "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74430",
-  "total_cs_velo": 5,
+  "total_cs_velo": 7,
   "fields": [
     {
       "field": "Men Category 4/5",
@@ -27,11 +27,20 @@
       "field": "Masters men 40",
       "time": null,
       "riders": [
+        "Jon Elison",
         "John Rachfal",
         "Joseph Secoges"
       ],
-      "cs_velo_count": 2
+      "cs_velo_count": 3
+    },
+    {
+      "field": "Men Category 2/3",
+      "time": null,
+      "riders": [
+        "Jon Elison"
+      ],
+      "cs_velo_count": 1
     }
   ],
-  "scraped_at": "2026-04-08T07:47:38.041Z"
+  "scraped_at": "2026-04-08T13:14:00.787Z"
 }
