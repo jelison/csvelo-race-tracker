@@ -1,12 +1,9 @@
 /**
- * CS Velo — BikeReg Confirmed Registrant Scraper v5
+ * CS Velo — BikeReg Confirmed Registrant Scraper v6
  *
- * BikeReg's confirmed page uses alternating table pairs:
- *   Table N   = category label row  ("6 entries - Masters Men 40+")
- *   Table N+1 = rider data rows     (FIRST | LAST | CITY | ST | TEAM | DATE)
- *
- * We click EXPAND ALL, then walk tables in pairs to associate each
- * data table with its category label from the preceding table.
+ * Changes from v5:
+ *  - Events whose date is more than 1 day in the past are automatically
+ *    excluded from index.json (but their data file is kept for reference).
  */
 
 const { chromium } = require('playwright');
@@ -22,6 +19,31 @@ const TEAM_MATCH = config.team_names.map(n => n.toLowerCase().trim());
 function eventSlug(event) {
   const m = event.confirmed_url.match(/\/Confirmed\/(\d+)/i);
   return m ? m[1] : event.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+}
+
+/**
+ * Parse a date string like "Sun April 12, 2026" or "April 12, 2026"
+ * Returns a Date object (midnight local) or null if unparseable.
+ */
+function parseEventDate(dateStr) {
+  if (!dateStr) return null;
+  // Strip leading day-of-week if present ("Sun April 12, 2026" → "April 12, 2026")
+  const cleaned = dateStr.replace(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+/i, '').trim();
+  const d = new Date(cleaned);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+/**
+ * Returns true if the event is still current (today or in the future,
+ * or within 1 day after the event date so same-day updates still show).
+ */
+function isEventCurrent(dateStr) {
+  const eventDate = parseEventDate(dateStr);
+  if (!eventDate) return true; // no date = keep it (can't tell)
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 1); // 1 day ago
+  cutoff.setHours(0, 0, 0, 0);
+  return eventDate >= cutoff;
 }
 
 async function scrapeEvent(browser, event) {
@@ -57,16 +79,10 @@ async function scrapeEvent(browser, event) {
       }
 
       // ── Event metadata ──────────────────────────────────────────────────
-      // BikeReg doesn't use semantic CSS classes for date/location.
-      // Instead, parse from the page text near the event title.
-      // The pattern is always: Event Name / Date / City, State
-      const fullText = document.body.innerText;
-
-      // Event name from h1
-      const h1 = document.querySelector('h1');
+      const fullText  = document.body.innerText;
+      const h1        = document.querySelector('h1');
       const eventName = (h1 && h1.innerText.trim()) || cfg.name;
 
-      // Date: look for pattern like "Sun April 12, 2026" or "April 12, 2026"
       const dateMatch = fullText.match(
         /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/
       ) || fullText.match(
@@ -74,32 +90,25 @@ async function scrapeEvent(browser, event) {
       );
       const eventDate = dateMatch ? dateMatch[0] : null;
 
-      // Location: look for "City, ST" pattern (2-letter state code) near the date
-      // Find the area of text near the date match and extract the city/state line
       let eventLocation = null;
       if (dateMatch) {
         const dateIdx  = fullText.indexOf(dateMatch[0]);
         const textNear = fullText.slice(dateIdx, dateIdx + 200);
-        // Match "City Name, ST" — state is 2 uppercase letters
         const locMatch = textNear.match(/([A-Za-z\s]+),\s+([A-Z]{2})\b/);
         if (locMatch) eventLocation = locMatch[0].trim();
       }
-
-      console.log('Extracted date:', eventDate);
-      console.log('Extracted location:', eventLocation);
 
       // ── Parse all tables ────────────────────────────────────────────────
       const tables = Array.from(document.querySelectorAll('table'));
 
       const classified = tables.map(table => {
-        const rows = Array.from(table.querySelectorAll('tr'));
+        const rows        = Array.from(table.querySelectorAll('tr'));
         if (rows.length === 0) return { type: 'empty' };
 
         const firstRowText = rows[0].innerText.trim();
         const allCellText  = Array.from(rows[0].querySelectorAll('th, td'))
           .map(c => c.innerText.trim().toLowerCase());
 
-        // A DATA table: first row has column headers (FIRST, LAST, TEAM, etc.)
         const isDataHeader =
           allCellText.some(t => t.includes('first') || t.includes('last') || t.includes('name')) &&
           allCellText.some(t => t.includes('team') || t.includes('club'));
@@ -114,7 +123,6 @@ async function scrapeEvent(browser, event) {
           for (const row of rows.slice(1)) {
             const cells = Array.from(row.querySelectorAll('td')).map(c => c.innerText.trim());
             if (cells.length === 0) continue;
-
             const teamVal = iTeam >= 0 ? (cells[iTeam] || '') : '';
             if (!isCSVelo(teamVal)) continue;
 
@@ -130,11 +138,9 @@ async function scrapeEvent(browser, event) {
             const timeVal = iTime >= 0 ? (cells[iTime] || '') : '';
             if (name) riders.push({ name: name.trim(), time: timeVal });
           }
-
           return { type: 'data', riders };
         }
 
-        // A LABEL table: single row with category name + entry count
         const cleaned = firstRowText
           .replace(/\d+\s+entr(y|ies)/gi, '')
           .replace(/[-+]/g, '')
@@ -157,11 +163,7 @@ async function scrapeEvent(browser, event) {
           currentLabel = t.label;
         } else if (t.type === 'data' && t.riders.length > 0) {
           if (!fieldMap[currentLabel]) {
-            fieldMap[currentLabel] = {
-              field:  currentLabel,
-              time:   t.riders[0].time || null,
-              riders: [],
-            };
+            fieldMap[currentLabel] = { field: currentLabel, time: null, riders: [] };
           }
           for (const r of t.riders) {
             if (!fieldMap[currentLabel].riders.includes(r.name)) {
@@ -220,22 +222,37 @@ async function main() {
     fs.writeFileSync(path.join(DATA_DIR, filename), JSON.stringify(data, null, 2));
     console.log(`  → Wrote data/${filename}`);
 
-    index.push({
-      slug, filename,
-      event_name:     data.event_name,
-      event_date:     data.event_date,
-      event_location: data.event_location,
-      bikereg_url:    data.bikereg_url,
-      total_cs_velo:  data.total_cs_velo,
-      scraped_at:     data.scraped_at,
-    });
+    // Only add to the index if the event is current (not more than 1 day past)
+    if (isEventCurrent(data.event_date)) {
+      index.push({
+        slug, filename,
+        event_name:     data.event_name,
+        event_date:     data.event_date,
+        event_location: data.event_location,
+        bikereg_url:    data.bikereg_url,
+        total_cs_velo:  data.total_cs_velo,
+        scraped_at:     data.scraped_at,
+      });
+      console.log(`  ✓ Added to index (current event)`);
+    } else {
+      console.log(`  ⏭  Skipped from index (event date has passed)`);
+    }
   }
 
   await browser.close();
 
+  // Sort index by event date ascending (soonest first)
+  index.sort((a, b) => {
+    const da = parseEventDate(a.event_date);
+    const db = parseEventDate(b.event_date);
+    if (!da) return 1;
+    if (!db) return -1;
+    return da - db;
+  });
+
   fs.writeFileSync(path.join(DATA_DIR, 'index.json'),
     JSON.stringify({ events: index, generated_at: new Date().toISOString() }, null, 2));
-  console.log(`\n✓ index.json written with ${index.length} event(s)`);
+  console.log(`\n✓ index.json written with ${index.length} active event(s)`);
 }
 
 main().catch(err => { console.error('Fatal:', err); process.exit(1); });
