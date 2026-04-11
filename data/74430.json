@@ -4,7 +4,7 @@
   "event_location": "Bordentown, NJ",
   "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74430",
-  "total_cs_velo": 7,
+  "total_cs_velo": 8,
   "fields": [
     {
       "field": "Men Category 4/5",
@@ -27,11 +27,12 @@
       "field": "Masters men 40",
       "time": null,
       "riders": [
+        "Dustin Armstrong",
         "Jon Elison",
         "John Rachfal",
         "Joseph Secoges"
       ],
-      "cs_velo_count": 3
+      "cs_velo_count": 4
     },
     {
       "field": "Men Category 2/3",
@@ -42,5 +43,5 @@
       "cs_velo_count": 1
     }
   ],
-  "scraped_at": "2026-04-11T14:32:48.757Z"
+  "scraped_at": "2026-04-11T16:31:05.802Z"
 }
