@@ -1,10 +1,10 @@
 {
-  "event_name": "www.bikereg.com",
+  "event_name": "Diamond Mountain Stage Race",
   "event_date": null,
   "event_location": null,
   "bikereg_url": "https://www.bikereg.com/dmsr",
   "confirmed_url": "https://www.bikereg.com/Confirmed/73230",
   "total_cs_velo": 0,
   "fields": [],
-  "scraped_at": "2026-04-11T20:27:36.500Z"
+  "scraped_at": "2026-04-11T22:27:02.941Z"
 }
