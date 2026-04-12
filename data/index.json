@@ -8,7 +8,7 @@
       "event_location": "Bordentown, NJ",
       "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
       "total_cs_velo": 8,
-      "scraped_at": "2026-04-12T20:30:06.973Z"
+      "scraped_at": "2026-04-12T22:28:31.556Z"
     },
     {
       "slug": "74245",
@@ -18,7 +18,7 @@
       "event_location": "Easton, PA",
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "total_cs_velo": 2,
-      "scraped_at": "2026-04-12T20:31:16.733Z"
+      "scraped_at": "2026-04-12T22:29:41.381Z"
     },
     {
       "slug": "73765",
@@ -28,7 +28,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:12.241Z"
+      "scraped_at": "2026-04-12T22:28:36.861Z"
     },
     {
       "slug": "72378",
@@ -38,7 +38,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/gssr2026",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:17.545Z"
+      "scraped_at": "2026-04-12T22:28:42.100Z"
     },
     {
       "slug": "72955",
@@ -48,7 +48,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:22.784Z"
+      "scraped_at": "2026-04-12T22:28:47.406Z"
     },
     {
       "slug": "72378",
@@ -58,7 +58,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/gssr2026",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:28.026Z"
+      "scraped_at": "2026-04-12T22:28:52.720Z"
     },
     {
       "slug": "72955",
@@ -68,7 +68,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:33.270Z"
+      "scraped_at": "2026-04-12T22:28:57.973Z"
     },
     {
       "slug": "73230",
@@ -78,7 +78,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/dmsr",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:38.571Z"
+      "scraped_at": "2026-04-12T22:29:03.224Z"
     },
     {
       "slug": "73766",
@@ -88,7 +88,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:43.837Z"
+      "scraped_at": "2026-04-12T22:29:08.488Z"
     },
     {
       "slug": "74576",
@@ -98,7 +98,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:49.114Z"
+      "scraped_at": "2026-04-12T22:29:13.750Z"
     },
     {
       "slug": "74528",
@@ -108,7 +108,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:54.363Z"
+      "scraped_at": "2026-04-12T22:29:19.003Z"
     },
     {
       "slug": "75621",
@@ -118,7 +118,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:30:59.702Z"
+      "scraped_at": "2026-04-12T22:29:24.282Z"
     },
     {
       "slug": "74437",
@@ -128,7 +128,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:31:04.968Z"
+      "scraped_at": "2026-04-12T22:29:29.587Z"
     },
     {
       "slug": "74821",
@@ -138,7 +138,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:31:10.231Z"
+      "scraped_at": "2026-04-12T22:29:34.865Z"
     },
     {
       "slug": "74240",
@@ -148,8 +148,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-12T20:31:22.007Z"
+      "scraped_at": "2026-04-12T22:29:46.703Z"
     }
   ],
-  "generated_at": "2026-04-12T20:31:22.045Z"
+  "generated_at": "2026-04-12T22:29:46.734Z"
 }
