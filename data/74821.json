@@ -1,10 +1,10 @@
 {
-  "event_name": "www.bikereg.com",
-  "event_date": null,
-  "event_location": null,
+  "event_name": "Tour of Plainfield: The New Jersey Senior Criterium Championships",
+  "event_date": "Sat May 23, 2026",
+  "event_location": "Plainfield, NJ",
   "bikereg_url": "https://www.bikereg.com/plainfield",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74821",
   "total_cs_velo": 0,
   "fields": [],
-  "scraped_at": "2026-04-16T06:00:02.347Z"
+  "scraped_at": "2026-04-16T07:53:54.461Z"
 }
