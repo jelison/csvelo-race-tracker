@@ -1,24 +1,14 @@
 {
   "events": [
     {
-      "slug": "74245",
-      "filename": "74245.json",
-      "event_name": "Easton Criterium pb LVHN",
-      "event_date": "Sun May 24, 2026",
-      "event_location": "Easton, PA",
-      "bikereg_url": "https://www.bikereg.com/eastoncrit",
+      "slug": "74240",
+      "filename": "74240.json",
+      "event_name": "81st Tour of Somerville pb Unity Bank",
+      "event_date": "Mon May 25, 2026",
+      "event_location": "Somerville, NJ",
+      "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 2,
-      "scraped_at": "2026-04-17T16:52:16.214Z"
-    },
-    {
-      "slug": "73765",
-      "filename": "73765.json",
-      "event_name": "www.bikereg.com",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:11.183Z"
+      "scraped_at": "2026-04-17T18:54:30.901Z"
     },
     {
       "slug": "72378",
@@ -28,7 +18,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/gssr2026",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:16.493Z"
+      "scraped_at": "2026-04-17T18:53:24.422Z"
     },
     {
       "slug": "72955",
@@ -38,7 +28,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:21.762Z"
+      "scraped_at": "2026-04-17T18:53:29.810Z"
     },
     {
       "slug": "72378",
@@ -48,7 +38,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/gssr2026",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:27.050Z"
+      "scraped_at": "2026-04-17T18:53:35.170Z"
     },
     {
       "slug": "72955",
@@ -58,7 +48,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:32.296Z"
+      "scraped_at": "2026-04-17T18:53:40.524Z"
     },
     {
       "slug": "73230",
@@ -68,7 +58,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/dmsr",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:37.560Z"
+      "scraped_at": "2026-04-17T18:53:46.110Z"
     },
     {
       "slug": "73766",
@@ -78,7 +68,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:42.790Z"
+      "scraped_at": "2026-04-17T18:53:51.492Z"
     },
     {
       "slug": "74576",
@@ -88,7 +78,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:48.273Z"
+      "scraped_at": "2026-04-17T18:53:57.002Z"
     },
     {
       "slug": "74528",
@@ -98,7 +88,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:53.574Z"
+      "scraped_at": "2026-04-17T18:54:02.385Z"
     },
     {
       "slug": "75621",
@@ -108,7 +98,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:51:58.817Z"
+      "scraped_at": "2026-04-17T18:54:07.746Z"
     },
     {
       "slug": "74437",
@@ -118,7 +108,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:52:04.065Z"
+      "scraped_at": "2026-04-17T18:54:13.115Z"
     },
     {
       "slug": "74821",
@@ -128,18 +118,18 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:52:09.334Z"
+      "scraped_at": "2026-04-17T18:54:18.465Z"
     },
     {
-      "slug": "74240",
-      "filename": "74240.json",
+      "slug": "74245",
+      "filename": "74245.json",
       "event_name": "www.bikereg.com",
       "event_date": null,
       "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/tourofsomerville",
+      "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-17T16:52:21.495Z"
+      "scraped_at": "2026-04-17T18:54:23.824Z"
     }
   ],
-  "generated_at": "2026-04-17T16:52:21.530Z"
+  "generated_at": "2026-04-17T18:54:30.942Z"
 }
