@@ -1,36 +1,10 @@
 {
-  "event_name": "Cherry Blossom Challenge",
-  "event_date": "Sat April 4, 2026",
-  "event_location": "Newark, NJ",
+  "event_name": "Server Error in '/' Application.",
+  "event_date": null,
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/cherry-blossom-challenge",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74815",
-  "total_cs_velo": 4,
-  "fields": [
-    {
-      "field": "Masters 50",
-      "time": null,
-      "riders": [
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 1
-    },
-    {
-      "field": "Masters 35",
-      "time": null,
-      "riders": [
-        "Dustin Armstrong"
-      ],
-      "cs_velo_count": 1
-    },
-    {
-      "field": "Category 123 Race",
-      "time": null,
-      "riders": [
-        "Dustin Armstrong",
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 2
-    }
-  ],
-  "scraped_at": "2026-04-20T16:59:52.864Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "scraped_at": "2026-04-20T18:57:46.907Z"
 }

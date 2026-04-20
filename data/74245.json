@@ -1,27 +1,10 @@
 {
-  "event_name": "Easton Criterium pb LVHN",
-  "event_date": "Sun May 24, 2026",
-  "event_location": "Easton, PA",
+  "event_name": "Server Error in '/' Application.",
+  "event_date": null,
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/eastoncrit",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74245",
-  "total_cs_velo": 2,
-  "fields": [
-    {
-      "field": "Master's Men 40 Category 14",
-      "time": null,
-      "riders": [
-        "Jon Elison"
-      ],
-      "cs_velo_count": 1
-    },
-    {
-      "field": "Men 2/3",
-      "time": null,
-      "riders": [
-        "Jon Elison"
-      ],
-      "cs_velo_count": 1
-    }
-  ],
-  "scraped_at": "2026-04-20T17:01:10.170Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "scraped_at": "2026-04-20T18:59:52.694Z"
 }

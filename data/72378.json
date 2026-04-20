@@ -1,10 +1,10 @@
 {
-  "event_name": "www.bikereg.com",
+  "event_name": "Server Error in '/' Application.",
   "event_date": null,
   "event_location": null,
   "bikereg_url": "https://www.bikereg.com/gssr2026",
   "confirmed_url": "https://www.bikereg.com/Confirmed/72378",
   "total_cs_velo": 0,
   "fields": [],
-  "scraped_at": "2026-04-20T17:00:20.972Z"
+  "scraped_at": "2026-04-20T18:58:29.803Z"
 }

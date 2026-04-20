@@ -1,47 +1,10 @@
 {
   "event_name": "QCW Country Fair",
-  "event_date": "Sun April 12, 2026",
-  "event_location": "Bordentown, NJ",
+  "event_date": null,
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74430",
-  "total_cs_velo": 8,
-  "fields": [
-    {
-      "field": "Men Category 4/5",
-      "time": null,
-      "riders": [
-        "Johnny Archer"
-      ],
-      "cs_velo_count": 1
-    },
-    {
-      "field": "Masters Men Category 50",
-      "time": null,
-      "riders": [
-        "John Rachfal",
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 2
-    },
-    {
-      "field": "Masters men 40",
-      "time": null,
-      "riders": [
-        "Dustin Armstrong",
-        "Jon Elison",
-        "John Rachfal",
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 4
-    },
-    {
-      "field": "Men Category 2/3",
-      "time": null,
-      "riders": [
-        "Jon Elison"
-      ],
-      "cs_velo_count": 1
-    }
-  ],
-  "scraped_at": "2026-04-20T16:59:59.767Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "scraped_at": "2026-04-20T18:58:00.424Z"
 }
