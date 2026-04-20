@@ -1,10 +1,10 @@
 {
-  "event_name": "Server Error in '/' Application.",
+  "event_name": "www.bikereg.com",
   "event_date": null,
   "event_location": null,
   "bikereg_url": "https://www.bikereg.com/plainfield",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74821",
   "total_cs_velo": 0,
   "fields": [],
-  "scraped_at": "2026-04-20T18:59:42.440Z"
+  "scraped_at": "2026-04-20T20:41:38.540Z"
 }

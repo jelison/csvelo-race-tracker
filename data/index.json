@@ -1,165 +1,145 @@
 {
   "events": [
     {
-      "slug": "74815",
-      "filename": "74815.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/cherry-blossom-challenge",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:57:46.907Z"
-    },
-    {
-      "slug": "74430",
-      "filename": "74430.json",
-      "event_name": "QCW Country Fair",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:58:00.424Z"
-    },
-    {
-      "slug": "73765",
-      "filename": "73765.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:58:05.721Z"
-    },
-    {
-      "slug": "72378",
-      "filename": "72378.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/gssr2026",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:58:13.492Z"
-    },
-    {
-      "slug": "72955",
-      "filename": "72955.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:58:18.765Z"
-    },
-    {
-      "slug": "72378",
-      "filename": "72378.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/gssr2026",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:58:29.803Z"
-    },
-    {
-      "slug": "72955",
-      "filename": "72955.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:58:34.942Z"
-    },
-    {
-      "slug": "73230",
-      "filename": "73230.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/dmsr",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:58:50.835Z"
-    },
-    {
-      "slug": "73766",
-      "filename": "73766.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:58:56.115Z"
-    },
-    {
-      "slug": "74576",
-      "filename": "74576.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:59:08.355Z"
-    },
-    {
-      "slug": "74528",
-      "filename": "74528.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:59:19.497Z"
-    },
-    {
-      "slug": "75621",
-      "filename": "75621.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:59:25.026Z"
-    },
-    {
-      "slug": "74437",
-      "filename": "74437.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:59:36.007Z"
-    },
-    {
-      "slug": "74821",
-      "filename": "74821.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/plainfield",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:59:42.440Z"
-    },
-    {
       "slug": "74245",
       "filename": "74245.json",
-      "event_name": "Server Error in '/' Application.",
-      "event_date": null,
-      "event_location": null,
+      "event_name": "Easton Criterium pb LVHN",
+      "event_date": "Sun May 24, 2026",
+      "event_location": "Easton, PA",
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T18:59:52.694Z"
+      "total_cs_velo": 2,
+      "scraped_at": "2026-04-20T20:41:45.395Z"
     },
     {
       "slug": "74240",
       "filename": "74240.json",
-      "event_name": "Server Error in '/' Application.",
+      "event_name": "81st Tour of Somerville pb Unity Bank",
+      "event_date": "Mon May 25, 2026",
+      "event_location": "Somerville, NJ",
+      "bikereg_url": "https://www.bikereg.com/tourofsomerville",
+      "total_cs_velo": 2,
+      "scraped_at": "2026-04-20T20:41:52.338Z"
+    },
+    {
+      "slug": "73765",
+      "filename": "73765.json",
+      "event_name": "www.bikereg.com",
       "event_date": null,
       "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/tourofsomerville",
+      "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-20T19:00:00.188Z"
+      "scraped_at": "2026-04-20T20:40:40.872Z"
+    },
+    {
+      "slug": "72378",
+      "filename": "72378.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/gssr2026",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:40:46.092Z"
+    },
+    {
+      "slug": "72955",
+      "filename": "72955.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:40:51.321Z"
+    },
+    {
+      "slug": "72378",
+      "filename": "72378.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/gssr2026",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:40:56.593Z"
+    },
+    {
+      "slug": "72955",
+      "filename": "72955.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:41:01.856Z"
+    },
+    {
+      "slug": "73230",
+      "filename": "73230.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/dmsr",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:41:07.110Z"
+    },
+    {
+      "slug": "73766",
+      "filename": "73766.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:41:12.337Z"
+    },
+    {
+      "slug": "74576",
+      "filename": "74576.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:41:17.540Z"
+    },
+    {
+      "slug": "74528",
+      "filename": "74528.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:41:22.770Z"
+    },
+    {
+      "slug": "75621",
+      "filename": "75621.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:41:28.037Z"
+    },
+    {
+      "slug": "74437",
+      "filename": "74437.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:41:33.292Z"
+    },
+    {
+      "slug": "74821",
+      "filename": "74821.json",
+      "event_name": "www.bikereg.com",
+      "event_date": null,
+      "event_location": null,
+      "bikereg_url": "https://www.bikereg.com/plainfield",
+      "total_cs_velo": 0,
+      "scraped_at": "2026-04-20T20:41:38.540Z"
     }
   ],
-  "generated_at": "2026-04-20T19:00:00.215Z"
+  "generated_at": "2026-04-20T20:41:52.379Z"
 }
