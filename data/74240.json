@@ -4,7 +4,17 @@
   "event_location": "Somerville, NJ",
   "bikereg_url": "https://www.bikereg.com/tourofsomerville",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74240",
-  "total_cs_velo": 0,
-  "fields": [],
-  "scraped_at": "2026-04-21T15:09:52.457Z"
+  "total_cs_velo": 2,
+  "fields": [
+    {
+      "field": "Master's Men 40 Category 14",
+      "time": null,
+      "riders": [
+        "Dustin Armstrong",
+        "Joseph Secoges"
+      ],
+      "cs_velo_count": 2
+    }
+  ],
+  "scraped_at": "2026-04-21T16:56:02.141Z"
 }
