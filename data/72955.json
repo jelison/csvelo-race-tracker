@@ -1,10 +1,29 @@
 {
-  "event_name": "www.bikereg.com",
-  "event_date": null,
-  "event_location": null,
+  "event_name": "QCW Spring Classic",
+  "event_date": "Sat April 25, 2026",
+  "event_location": "Breinigsville, PA",
   "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
   "confirmed_url": "https://www.bikereg.com/Confirmed/72955",
-  "total_cs_velo": 0,
-  "fields": [],
-  "scraped_at": "2026-04-22T09:15:32.734Z"
+  "total_cs_velo": 4,
+  "fields": [
+    {
+      "field": "Masters Men 45",
+      "time": null,
+      "riders": [
+        "John Rachfal",
+        "Joseph Secoges"
+      ],
+      "cs_velo_count": 2
+    },
+    {
+      "field": "Men P/1/2/3",
+      "time": null,
+      "riders": [
+        "Jon Elison",
+        "Joseph Secoges"
+      ],
+      "cs_velo_count": 2
+    }
+  ],
+  "scraped_at": "2026-04-22T11:00:42.552Z"
 }
