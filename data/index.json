@@ -8,7 +8,17 @@
       "event_location": "Easton, PA",
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "total_cs_velo": 3,
-      "scraped_at": "2026-04-26T22:34:26.076Z"
+      "scraped_at": "2026-04-27T02:13:12.123Z"
+    },
+    {
+      "slug": "74240",
+      "filename": "74240.json",
+      "event_name": "81st Tour of Somerville pb Unity Bank",
+      "event_date": "Mon May 25, 2026",
+      "event_location": "Somerville, NJ",
+      "bikereg_url": "https://www.bikereg.com/tourofsomerville",
+      "total_cs_velo": 2,
+      "scraped_at": "2026-04-27T02:13:19.024Z"
     },
     {
       "slug": "73765",
@@ -18,7 +28,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:33:19.510Z"
+      "scraped_at": "2026-04-27T02:12:07.284Z"
     },
     {
       "slug": "72378",
@@ -28,7 +38,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/gssr2026",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:33:24.898Z"
+      "scraped_at": "2026-04-27T02:12:12.543Z"
     },
     {
       "slug": "72955",
@@ -38,7 +48,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:33:30.293Z"
+      "scraped_at": "2026-04-27T02:12:17.794Z"
     },
     {
       "slug": "72378",
@@ -48,7 +58,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/gssr2026",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:33:35.691Z"
+      "scraped_at": "2026-04-27T02:12:23.045Z"
     },
     {
       "slug": "72955",
@@ -58,7 +68,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:33:41.071Z"
+      "scraped_at": "2026-04-27T02:12:28.297Z"
     },
     {
       "slug": "73230",
@@ -68,7 +78,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/dmsr",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:33:46.487Z"
+      "scraped_at": "2026-04-27T02:12:33.617Z"
     },
     {
       "slug": "73766",
@@ -78,7 +88,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:33:51.884Z"
+      "scraped_at": "2026-04-27T02:12:38.876Z"
     },
     {
       "slug": "74576",
@@ -88,7 +98,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:33:57.266Z"
+      "scraped_at": "2026-04-27T02:12:44.145Z"
     },
     {
       "slug": "74528",
@@ -98,7 +108,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:34:02.661Z"
+      "scraped_at": "2026-04-27T02:12:49.392Z"
     },
     {
       "slug": "75621",
@@ -108,7 +118,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:34:08.138Z"
+      "scraped_at": "2026-04-27T02:12:54.657Z"
     },
     {
       "slug": "74437",
@@ -118,7 +128,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:34:13.521Z"
+      "scraped_at": "2026-04-27T02:12:59.924Z"
     },
     {
       "slug": "74821",
@@ -128,18 +138,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:34:18.978Z"
-    },
-    {
-      "slug": "74240",
-      "filename": "74240.json",
-      "event_name": "www.bikereg.com",
-      "event_date": null,
-      "event_location": null,
-      "bikereg_url": "https://www.bikereg.com/tourofsomerville",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-04-26T22:34:31.454Z"
+      "scraped_at": "2026-04-27T02:13:05.250Z"
     }
   ],
-  "generated_at": "2026-04-26T22:34:31.487Z"
+  "generated_at": "2026-04-27T02:13:19.057Z"
 }
