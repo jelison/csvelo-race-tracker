@@ -1,19 +1,10 @@
 {
-  "event_name": "Steve Reed Memorial Time Trial p/b Team Somerset (NJTT Cup #1)",
-  "event_date": "Sun April 12, 2026",
-  "event_location": "Cape May Courthouse, NJ",
+  "event_name": "www.bikereg.com",
+  "event_date": null,
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
   "confirmed_url": "https://www.bikereg.com/Confirmed/73765",
-  "total_cs_velo": 1,
-  "fields": [
-    {
-      "field": "Masters 50",
-      "time": null,
-      "riders": [
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 1
-    }
-  ],
-  "scraped_at": "2026-04-30T17:14:47.699Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "scraped_at": "2026-04-30T19:12:05.708Z"
 }
