@@ -1,10 +1,10 @@
 {
-  "event_name": "Wilmington Grand Prix - Monkey Hill Time Trial",
-  "event_date": "Fri May 15, 2026",
-  "event_location": "Wilmington, DE",
+  "event_name": "www.bikereg.com",
+  "event_date": null,
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74576",
   "total_cs_velo": 0,
   "fields": [],
-  "scraped_at": "2026-04-30T19:12:46.963Z"
+  "scraped_at": "2026-04-30T20:56:03.355Z"
 }
