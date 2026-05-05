@@ -80,7 +80,8 @@ async function scrapeEvent(browser, event) {
 
       // ── Event metadata ──────────────────────────────────────────────────
       const fullText  = document.body.innerText;
-      const eventName = cfg.name;
+      const h1        = document.querySelector('h1');
+      const eventName = (h1 && h1.innerText.trim()) || cfg.name;
 
       const dateMatch = fullText.match(
         /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/
