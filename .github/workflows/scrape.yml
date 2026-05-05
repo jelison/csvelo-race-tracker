@@ -32,7 +32,10 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit — data is up to date."
           else
-            git commit -m "chore: update race registrant data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git stash
             git pull --rebase origin main
+            git stash pop
+            git add data/
+            git commit -m "chore: update race registrant data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
             git push
           fi
