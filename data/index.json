@@ -8,7 +8,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:02.955Z"
+      "scraped_at": "2026-05-05T22:52:04.496Z"
     },
     {
       "slug": "72955",
@@ -18,7 +18,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:08.318Z"
+      "scraped_at": "2026-05-05T22:52:09.796Z"
     },
     {
       "slug": "73230",
@@ -28,7 +28,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/dmsr",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:13.656Z"
+      "scraped_at": "2026-05-05T22:52:15.069Z"
     },
     {
       "slug": "73766",
@@ -38,7 +38,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:18.998Z"
+      "scraped_at": "2026-05-05T22:52:20.329Z"
     },
     {
       "slug": "74576",
@@ -48,7 +48,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:24.360Z"
+      "scraped_at": "2026-05-05T22:52:25.727Z"
     },
     {
       "slug": "74528",
@@ -58,7 +58,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:29.690Z"
+      "scraped_at": "2026-05-05T22:52:30.980Z"
     },
     {
       "slug": "75621",
@@ -68,7 +68,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:35.055Z"
+      "scraped_at": "2026-05-05T22:52:36.262Z"
     },
     {
       "slug": "74437",
@@ -78,7 +78,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:40.366Z"
+      "scraped_at": "2026-05-05T22:52:41.506Z"
     },
     {
       "slug": "74821",
@@ -88,7 +88,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:45.693Z"
+      "scraped_at": "2026-05-05T22:52:46.829Z"
     },
     {
       "slug": "74245",
@@ -98,7 +98,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:51.013Z"
+      "scraped_at": "2026-05-05T22:52:52.070Z"
     },
     {
       "slug": "74240",
@@ -108,8 +108,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-05T21:00:56.345Z"
+      "scraped_at": "2026-05-05T22:52:57.320Z"
     }
   ],
-  "generated_at": "2026-05-05T21:00:56.384Z"
+  "generated_at": "2026-05-05T22:52:57.357Z"
 }
