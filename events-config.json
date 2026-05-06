@@ -2,69 +2,64 @@
   "team_names": ["CS Velo", "CS VELO", "CSVELO"],
   "events": [
     {
-      "name": "Cherry Blossom Challenge",
-      "bikereg_url": "https://www.bikereg.com/cherry-blossom-challenge",
-      "confirmed_url": "https://www.bikereg.com/Confirmed/74815"
-    },
-    {
-      "name": "QCW Country Fair",
-      "bikereg_url": "https://www.bikereg.com/qcw-country-fair",
-      "confirmed_url": "https://www.bikereg.com/Confirmed/74430"
-    },
-    {
-      "name": "Steve Reed Memorial Time Trial",
-      "bikereg_url": "https://www.bikereg.com/steve-reed-tt",
-      "confirmed_url": "https://www.bikereg.com/Confirmed/73765"
-    },
-    {
-      "name": "QCW Spring Clasic",
-      "bikereg_url": "https://www.bikereg.com/qcwspringclassic",
-      "confirmed_url": "https://www.bikereg.com/Confirmed/72955"
-    },
-    {
-      "name": "Diamond Mountain Stage Race",
-      "bikereg_url": "https://www.bikereg.com/dmsr",
-      "confirmed_url": "https://www.bikereg.com/Confirmed/73230"
-    },
-    {
       "name": "Allamuchy Time Trial",
+      "date": "May 9, 2026",
       "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
       "confirmed_url": "https://www.bikereg.com/Confirmed/73766"
     },
     {
       "name": "Wilmington Grand Prix Monkey Hill TT",
+      "date": "May 15, 2026",
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
       "confirmed_url": "https://www.bikereg.com/Confirmed/74576"
     },
     {
       "name": "Wilmington Grand Prix",
+      "date": "May 16, 2026",
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
       "confirmed_url": "https://www.bikereg.com/Confirmed/74528"
     },
     {
       "name": "Pocopscon Road Race",
+      "date": "May 17, 2026",
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
       "confirmed_url": "https://www.bikereg.com/Confirmed/75621"
     },
     {
       "name": "Snickelfritz Points Crit",
+      "date": "May 22, 2026",
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "confirmed_url": "https://www.bikereg.com/Confirmed/74437"
     },
     {
       "name": "Tour of Plainfield",
+      "date": "May 23, 2026",
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "confirmed_url": "https://www.bikereg.com/Confirmed/74821"
     },
     {
       "name": "Easton Criterium",
+      "date": "May 24, 2026",
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "confirmed_url": "https://www.bikereg.com/Confirmed/74245"
     },
     {
       "name": "Tour of Somerville",
+      "date": "May 25, 2026",
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "confirmed_url": "https://www.bikereg.com/Confirmed/74240"
     }
+    {
+      "name": "Conshy Classic",
+      "date": "June 6, 2026",
+      "bikereg_url": "https://www.bikereg.com/conshy-classic",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74464"
+    }
+    {
+      "name": "Watermelon Crit",
+      "date": "June 7, 2026",
+      "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
+      "confirmed_url": "https://www.bikereg.com/Confirmed/74416"
+    }    
   ]
 }
