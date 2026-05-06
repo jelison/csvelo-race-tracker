@@ -59,7 +59,7 @@ async function scrapeEvent(browser, event) {
     });
 
     console.log(expanded ? '  ✓ Clicked EXPAND ALL' : '  ⚠️  EXPAND ALL not found');
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(5000);
 
     const result = await page.evaluate((cfg) => {
       const TEAM_MATCH_JS = cfg._teamMatchLower;
