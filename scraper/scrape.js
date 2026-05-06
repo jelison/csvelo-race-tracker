@@ -47,8 +47,13 @@ async function scrapeEvent(browser, event) {
   });
 
   try {
-    await page.goto(event.confirmed_url, { waitUntil: 'networkidle', timeout: 45000 });
-    await page.waitForTimeout(4000);
+    await page.goto(event.confirmed_url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    // Wait for page content to render, up to 10 seconds
+    await page.waitForFunction(() => {
+      const all = Array.from(document.querySelectorAll('a, span, button'));
+      return all.some(el => el.innerText && el.innerText.trim().toUpperCase().includes('EXPAND'));
+    }, { timeout: 10000 }).catch(() => null);
+    await page.waitForTimeout(2000);
     
     // Try multiple strategies to EXPAND ALL collapsed sections
     const expanded = await page.evaluate(() => {
