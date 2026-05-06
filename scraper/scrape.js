@@ -1,9 +1,10 @@
 /**
- * CS Velo — BikeReg Confirmed Registrant Scraper v6
+ * CS Velo — BikeReg Confirmed Registrant Scraper v7
  *
- * Changes from v5:
- *  - Events whose date is more than 1 day in the past are automatically
- *    excluded from index.json (but their data file is kept for reference).
+ * Key changes:
+ *  - Event name always comes from events-config.json (cfg.name) — never scraped
+ *  - Event date uses cfg.date from config as primary source, falls back to page scrape
+ *  - Events more than 1 day past are excluded from index.json automatically
  */
 
 const { chromium } = require('playwright');
@@ -21,27 +22,18 @@ function eventSlug(event) {
   return m ? m[1] : event.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 }
 
-/**
- * Parse a date string like "Sun April 12, 2026" or "April 12, 2026"
- * Returns a Date object (midnight local) or null if unparseable.
- */
 function parseEventDate(dateStr) {
   if (!dateStr) return null;
-  // Strip leading day-of-week if present ("Sun April 12, 2026" → "April 12, 2026")
   const cleaned = dateStr.replace(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+/i, '').trim();
   const d = new Date(cleaned);
   return isNaN(d.getTime()) ? null : d;
 }
 
-/**
- * Returns true if the event is still current (today or in the future,
- * or within 1 day after the event date so same-day updates still show).
- */
 function isEventCurrent(dateStr) {
   const eventDate = parseEventDate(dateStr);
-  if (!eventDate) return true; // no date = keep it (can't tell)
+  if (!eventDate) return false; // no date = exclude (can't tell, assume stale)
   const cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 1); // 1 day ago
+  cutoff.setDate(cutoff.getDate() - 1);
   cutoff.setHours(0, 0, 0, 0);
   return eventDate >= cutoff;
 }
@@ -78,22 +70,29 @@ async function scrapeEvent(browser, event) {
         return TEAM_MATCH_JS.some(t => v === t || v.includes(t));
       }
 
-      // ── Event metadata ──────────────────────────────────────────────────
-      const fullText  = document.body.innerText;
-      const h1        = document.querySelector('h1');
-      const eventName = (h1 && h1.innerText.trim()) || cfg.name;
+      // ── Event name: always use config, never scrape ─────────────────────
+      const eventName = cfg.name;
 
-      const dateMatch = fullText.match(
-        /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/
-      ) || fullText.match(
-        /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/
-      );
-      const eventDate = dateMatch ? dateMatch[0] : null;
+      // ── Date: use config date if provided, otherwise scrape ─────────────
+      let eventDate = cfg.date || null;
 
+      if (!eventDate) {
+        const fullText  = document.body.innerText;
+        const dateMatch = fullText.match(
+          /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/
+        ) || fullText.match(
+          /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}/
+        );
+        eventDate = dateMatch ? dateMatch[0] : null;
+      }
+
+      // ── Location: scrape from page text near the date ───────────────────
       let eventLocation = null;
-      if (dateMatch) {
-        const dateIdx  = fullText.indexOf(dateMatch[0]);
-        const textNear = fullText.slice(dateIdx, dateIdx + 200);
+      const fullText = document.body.innerText;
+
+      if (eventDate) {
+        const dateIdx  = fullText.indexOf(eventDate.replace(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+/i, ''));
+        const textNear = fullText.slice(Math.max(0, dateIdx - 50), dateIdx + 200);
         const locMatch = textNear.match(/([A-Za-z\s]+),\s+([A-Z]{2})\b/);
         if (locMatch) eventLocation = locMatch[0].trim();
       }
@@ -222,7 +221,6 @@ async function main() {
     fs.writeFileSync(path.join(DATA_DIR, filename), JSON.stringify(data, null, 2));
     console.log(`  → Wrote data/${filename}`);
 
-    // Only add to the index if the event is current (not more than 1 day past)
     if (isEventCurrent(data.event_date)) {
       index.push({
         slug, filename,
@@ -233,15 +231,15 @@ async function main() {
         total_cs_velo:  data.total_cs_velo,
         scraped_at:     data.scraped_at,
       });
-      console.log(`  ✓ Added to index (current event)`);
+      console.log(`  ✓ Added to index`);
     } else {
-      console.log(`  ⏭  Skipped from index (event date has passed)`);
+      console.log(`  ⏭  Skipped — event date has passed (${data.event_date})`);
     }
   }
 
   await browser.close();
 
-  // Sort index by event date ascending (soonest first)
+  // Sort by date ascending
   index.sort((a, b) => {
     const da = parseEventDate(a.event_date);
     const db = parseEventDate(b.event_date);
