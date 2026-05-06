@@ -1,20 +1,10 @@
 {
   "event_name": "Tour of Somerville",
   "event_date": "May 25, 2026",
-  "event_location": "Somerville, NJ",
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/tourofsomerville",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74240",
-  "total_cs_velo": 2,
-  "fields": [
-    {
-      "field": "Master's Men 40 Category 14",
-      "time": null,
-      "riders": [
-        "Dustin Armstrong",
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 2
-    }
-  ],
-  "scraped_at": "2026-05-06T16:50:12.304Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "scraped_at": "2026-05-06T17:06:49.909Z"
 }
