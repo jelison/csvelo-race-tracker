@@ -79,10 +79,25 @@ async function scrapeEvent(browser, event) {
     
     console.log(expanded ? `  ✓ Expanded sections: ${expanded}` : '  ⚠️  Could not expand sections');
     if (!expanded) {
-      const sample = await page.evaluate(() => document.body.innerText.slice(0, 500));
-      console.log(`  Page content sample:\n${sample}`);
+      const pageText = await page.evaluate(() => document.body.innerText.slice(0, 500));
+      const isBlocked = pageText.toLowerCase().includes('security verification') || 
+                        pageText.toLowerCase().includes('not a bot') ||
+                        pageText.toLowerCase().includes('checking your browser');
+      if (isBlocked) {
+        console.log(`  🔒 Cloudflare bot protection detected — marking as blocked`);
+        return {
+          event_name:       event.name,
+          event_date:       event.date || null,
+          event_location:   null,
+          bikereg_url:      event.bikereg_url,
+          confirmed_url:    event.confirmed_url,
+          total_cs_velo:    0,
+          fields:           [],
+          cloudflare_blocked: true,
+          scraped_at:       new Date().toISOString(),
+        };
+      }
     }
-    await page.waitForTimeout(5000);
 
     console.log(expanded ? '  ✓ Clicked EXPAND ALL' : '  ⚠️  EXPAND ALL not found');
     await page.waitForTimeout(5000);
