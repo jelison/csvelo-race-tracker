@@ -47,9 +47,9 @@ async function scrapeEvent(browser, event) {
   });
 
   try {
-    await page.goto(event.confirmed_url, { waitUntil: 'domcontentloaded', timeout: 45000 });
-    await page.waitForTimeout(2000);
-
+    await page.goto(event.confirmed_url, { waitUntil: 'networkidle', timeout: 45000 });
+    await page.waitForTimeout(4000);
+    
     // Try multiple strategies to EXPAND ALL collapsed sections
     const expanded = await page.evaluate(() => {
       const all = Array.from(document.querySelectorAll('a, button, span, div'));
