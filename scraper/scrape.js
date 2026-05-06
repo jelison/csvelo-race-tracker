@@ -64,11 +64,13 @@ async function scrapeEvent(browser, event) {
     const result = await page.evaluate((cfg) => {
       const TEAM_MATCH_JS = cfg._teamMatchLower;
 
-      function isCSVelo(str) {
-        if (!str) return false;
-        const v = str.toLowerCase().trim();
-        return TEAM_MATCH_JS.some(t => v === t || v.includes(t));
-      }
+    function isCSVelo(str) {
+      if (!str) return false;
+      const v = str.toLowerCase().trim();
+      const match = TEAM_MATCH_JS.some(t => v === t || v.includes(t));
+      if (v.length > 0) console.log(`    TEAM CELL: "${v}" → ${match ? 'MATCH' : 'no match'}`);
+      return match;
+    }
 
       // ── Event name: always use config, never scrape ─────────────────────
       const eventName = cfg.name;
