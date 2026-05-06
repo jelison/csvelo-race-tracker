@@ -50,13 +50,30 @@ async function scrapeEvent(browser, event) {
     await page.goto(event.confirmed_url, { waitUntil: 'domcontentloaded', timeout: 45000 });
     await page.waitForTimeout(2000);
 
-    // Click EXPAND ALL to reveal all collapsed category sections
+    // Try multiple strategies to EXPAND ALL collapsed sections
     const expanded = await page.evaluate(() => {
-      const all = Array.from(document.querySelectorAll('a, button, span'));
-      const btn = all.find(el => el.innerText && el.innerText.trim().toUpperCase() === 'EXPAND ALL');
-      if (btn) { btn.click(); return true; }
+      const all = Array.from(document.querySelectorAll('a, button, span, div'));
+      
+      // Strategy 1: exact "EXPAND ALL" text
+      let btn = all.find(el => el.innerText && el.innerText.trim().toUpperCase() === 'EXPAND ALL');
+      if (btn) { btn.click(); return 'exact match'; }
+    
+      // Strategy 2: partial match containing "expand"
+      btn = all.find(el => el.innerText && el.innerText.trim().toUpperCase().includes('EXPAND'));
+      if (btn) { btn.click(); return 'partial match'; }
+    
+      // Strategy 3: click every "+" element on the page
+      const plusBtns = all.filter(el => el.innerText && el.innerText.trim() === '+');
+      if (plusBtns.length > 0) {
+        plusBtns.forEach(el => el.click());
+        return `clicked ${plusBtns.length} plus buttons`;
+      }
+    
       return false;
     });
+    
+    console.log(expanded ? `  ✓ Expanded sections: ${expanded}` : '  ⚠️  Could not expand sections');
+    await page.waitForTimeout(5000);
 
     console.log(expanded ? '  ✓ Clicked EXPAND ALL' : '  ⚠️  EXPAND ALL not found');
     await page.waitForTimeout(5000);
