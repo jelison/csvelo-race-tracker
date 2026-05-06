@@ -1,10 +1,10 @@
 {
-  "event_name": "www.bikereg.com",
-  "event_date": null,
+  "event_name": "Pocopscon Road Race",
+  "event_date": "May 17, 2026",
   "event_location": null,
   "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
   "confirmed_url": "https://www.bikereg.com/Confirmed/75621",
   "total_cs_velo": 0,
   "fields": [],
-  "scraped_at": "2026-05-06T16:00:43.591Z"
+  "scraped_at": "2026-05-06T16:49:47.320Z"
 }
