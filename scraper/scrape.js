@@ -78,6 +78,10 @@ async function scrapeEvent(browser, event) {
     });
     
     console.log(expanded ? `  ✓ Expanded sections: ${expanded}` : '  ⚠️  Could not expand sections');
+    if (!expanded) {
+      const sample = await page.evaluate(() => document.body.innerText.slice(0, 500));
+      console.log(`  Page content sample:\n${sample}`);
+    }
     await page.waitForTimeout(5000);
 
     console.log(expanded ? '  ✓ Clicked EXPAND ALL' : '  ⚠️  EXPAND ALL not found');
