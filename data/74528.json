@@ -1,20 +1,11 @@
 {
   "event_name": "Wilmington Grand Prix",
   "event_date": "May 16, 2026",
-  "event_location": "Wilmington, DE",
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74528",
-  "total_cs_velo": 2,
-  "fields": [
-    {
-      "field": "Men's Masters 50",
-      "time": null,
-      "riders": [
-        "John Rachfal",
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 2
-    }
-  ],
-  "scraped_at": "2026-05-07T02:26:00.665Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "cloudflare_blocked": true,
+  "scraped_at": "2026-05-07T06:33:17.277Z"
 }
