@@ -1,11 +1,19 @@
 {
   "event_name": "Conshy Classic",
   "event_date": "June 6, 2026",
-  "event_location": null,
+  "event_location": "Conshohocken, PA",
   "bikereg_url": "https://www.bikereg.com/conshy-classic",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74464",
-  "total_cs_velo": 0,
-  "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-05-07T16:07:21.283Z"
+  "total_cs_velo": 1,
+  "fields": [
+    {
+      "field": "Masters Men 45",
+      "time": null,
+      "riders": [
+        "John Rachfal"
+      ],
+      "cs_velo_count": 1
+    }
+  ],
+  "scraped_at": "2026-05-07T19:32:56.952Z"
 }
