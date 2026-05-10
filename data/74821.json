@@ -1,10 +1,11 @@
 {
   "event_name": "Tour of Plainfield",
   "event_date": "May 23, 2026",
-  "event_location": "Plainfield, NJ",
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/plainfield",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74821",
   "total_cs_velo": 0,
   "fields": [],
-  "scraped_at": "2026-05-10T13:07:17.514Z"
+  "cloudflare_blocked": true,
+  "scraped_at": "2026-05-10T14:49:33.334Z"
 }
