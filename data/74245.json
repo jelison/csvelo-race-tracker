@@ -1,28 +1,11 @@
 {
   "event_name": "Easton Criterium",
   "event_date": "May 24, 2026",
-  "event_location": "Easton, PA",
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/eastoncrit",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74245",
-  "total_cs_velo": 3,
-  "fields": [
-    {
-      "field": "Master's Men 40 Category 14",
-      "time": null,
-      "riders": [
-        "Jon Elison"
-      ],
-      "cs_velo_count": 1
-    },
-    {
-      "field": "Men 2/3",
-      "time": null,
-      "riders": [
-        "Nicholas Basalyga",
-        "Jon Elison"
-      ],
-      "cs_velo_count": 2
-    }
-  ],
-  "scraped_at": "2026-05-10T18:55:28.062Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "cloudflare_blocked": true,
+  "scraped_at": "2026-05-10T20:43:59.603Z"
 }
