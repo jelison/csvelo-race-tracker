@@ -1,11 +1,19 @@
 {
   "event_name": "Pocopscon Road Race",
   "event_date": "May 17, 2026",
-  "event_location": null,
+  "event_location": "West Chester, PA",
   "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
   "confirmed_url": "https://www.bikereg.com/Confirmed/75621",
-  "total_cs_velo": 0,
-  "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-05-10T22:42:52.628Z"
+  "total_cs_velo": 1,
+  "fields": [
+    {
+      "field": "Masters Men 45",
+      "time": null,
+      "riders": [
+        "John Rachfal"
+      ],
+      "cs_velo_count": 1
+    }
+  ],
+  "scraped_at": "2026-05-11T02:38:54.938Z"
 }

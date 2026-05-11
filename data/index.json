@@ -1,24 +1,14 @@
 {
   "events": [
     {
-      "slug": "73766",
-      "filename": "73766.json",
-      "event_name": "Allamuchy Time Trial",
-      "event_date": "May 9, 2026",
-      "event_location": "Green Township, NJ",
-      "bikereg_url": "https://www.bikereg.com/allamuchy-tt",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:41:08.637Z"
-    },
-    {
       "slug": "74576",
       "filename": "74576.json",
       "event_name": "Wilmington Grand Prix Monkey Hill TT",
       "event_date": "May 15, 2026",
-      "event_location": "Wilmington, DE",
+      "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix-prolouge-time-trial",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:41:48.095Z"
+      "scraped_at": "2026-05-11T02:38:13.666Z"
     },
     {
       "slug": "74528",
@@ -28,17 +18,17 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:42:20.398Z"
+      "scraped_at": "2026-05-11T02:38:45.921Z"
     },
     {
       "slug": "75621",
       "filename": "75621.json",
       "event_name": "Pocopscon Road Race",
       "event_date": "May 17, 2026",
-      "event_location": null,
+      "event_location": "West Chester, PA",
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:42:52.628Z"
+      "total_cs_velo": 1,
+      "scraped_at": "2026-05-11T02:38:54.938Z"
     },
     {
       "slug": "74437",
@@ -48,7 +38,7 @@
       "event_location": "Breinigsville, PA",
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:43:01.621Z"
+      "scraped_at": "2026-05-11T02:39:03.959Z"
     },
     {
       "slug": "74821",
@@ -58,17 +48,17 @@
       "event_location": "Plainfield, NJ",
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:43:10.699Z"
+      "scraped_at": "2026-05-11T02:39:12.967Z"
     },
     {
       "slug": "74245",
       "filename": "74245.json",
       "event_name": "Easton Criterium",
       "event_date": "May 24, 2026",
-      "event_location": "Easton, PA",
+      "event_location": null,
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
-      "total_cs_velo": 3,
-      "scraped_at": "2026-05-10T22:43:19.814Z"
+      "total_cs_velo": 0,
+      "scraped_at": "2026-05-11T02:39:45.246Z"
     },
     {
       "slug": "74240",
@@ -78,17 +68,17 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:43:52.021Z"
+      "scraped_at": "2026-05-11T02:40:17.506Z"
     },
     {
       "slug": "74464",
       "filename": "74464.json",
       "event_name": "Conshy Classic",
       "event_date": "June 6, 2026",
-      "event_location": null,
+      "event_location": "Conshohocken, PA",
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
-      "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:44:24.227Z"
+      "total_cs_velo": 1,
+      "scraped_at": "2026-05-11T02:40:26.536Z"
     },
     {
       "slug": "74416",
@@ -98,8 +88,8 @@
       "event_location": "Piscataway, NJ",
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-10T22:44:33.204Z"
+      "scraped_at": "2026-05-11T02:40:35.516Z"
     }
   ],
-  "generated_at": "2026-05-10T22:44:33.248Z"
+  "generated_at": "2026-05-11T02:40:35.554Z"
 }
