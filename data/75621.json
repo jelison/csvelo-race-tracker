@@ -4,16 +4,17 @@
   "event_location": "West Chester, PA",
   "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
   "confirmed_url": "https://www.bikereg.com/Confirmed/75621",
-  "total_cs_velo": 1,
+  "total_cs_velo": 2,
   "fields": [
     {
       "field": "Masters Men 45",
       "time": null,
       "riders": [
+        "Dustin Armstrong",
         "John Rachfal"
       ],
-      "cs_velo_count": 1
+      "cs_velo_count": 2
     }
   ],
-  "scraped_at": "2026-05-11T17:53:16.983Z"
+  "scraped_at": "2026-05-11T19:42:33.455Z"
 }
