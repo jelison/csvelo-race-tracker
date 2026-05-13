@@ -1,11 +1,10 @@
 {
   "event_name": "Snickelfritz Points Crit",
   "event_date": "May 22, 2026",
-  "event_location": null,
+  "event_location": "Breinigsville, PA",
   "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74437",
   "total_cs_velo": 0,
   "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-05-13T14:22:09.768Z"
+  "scraped_at": "2026-05-13T18:01:13.619Z"
 }
