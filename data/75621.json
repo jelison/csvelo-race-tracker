@@ -4,8 +4,16 @@
   "event_location": "West Chester, PA",
   "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
   "confirmed_url": "https://www.bikereg.com/Confirmed/75621",
-  "total_cs_velo": 2,
+  "total_cs_velo": 3,
   "fields": [
+    {
+      "field": "Men P/1/2/3 (if more than 20 prereg, separate start from 45)",
+      "time": null,
+      "riders": [
+        "Jon Elison"
+      ],
+      "cs_velo_count": 1
+    },
     {
       "field": "Masters Men 45",
       "time": null,
@@ -16,5 +24,5 @@
       "cs_velo_count": 2
     }
   ],
-  "scraped_at": "2026-05-15T10:19:21.435Z"
+  "scraped_at": "2026-05-15T13:54:35.137Z"
 }
