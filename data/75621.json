@@ -4,8 +4,16 @@
   "event_location": "West Chester, PA",
   "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
   "confirmed_url": "https://www.bikereg.com/Confirmed/75621",
-  "total_cs_velo": 3,
+  "total_cs_velo": 4,
   "fields": [
+    {
+      "field": "Men Cat 4/5",
+      "time": null,
+      "riders": [
+        "Harrison Morris"
+      ],
+      "cs_velo_count": 1
+    },
     {
       "field": "Men P/1/2/3 (if more than 20 prereg, separate start from 45)",
       "time": null,
@@ -24,5 +32,5 @@
       "cs_velo_count": 2
     }
   ],
-  "scraped_at": "2026-05-15T22:51:54.604Z"
+  "scraped_at": "2026-05-16T02:29:33.446Z"
 }
