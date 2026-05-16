@@ -15,7 +15,7 @@
       "cs_velo_count": 1
     },
     {
-      "field": "Men P/1/2/3 (if more than 20 prereg, separate start from 45)",
+      "field": "Men P/1/2/3",
       "time": null,
       "riders": [
         "Jon Elison"
@@ -32,5 +32,5 @@
       "cs_velo_count": 2
     }
   ],
-  "scraped_at": "2026-05-16T13:11:07.892Z"
+  "scraped_at": "2026-05-16T14:52:42.036Z"
 }
