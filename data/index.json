@@ -8,7 +8,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-17T14:53:18.658Z"
+      "scraped_at": "2026-05-17T16:53:11.609Z"
     },
     {
       "slug": "75621",
@@ -18,7 +18,7 @@
       "event_location": "West Chester, PA",
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
       "total_cs_velo": 4,
-      "scraped_at": "2026-05-17T14:53:27.530Z"
+      "scraped_at": "2026-05-17T16:53:20.648Z"
     },
     {
       "slug": "74437",
@@ -28,7 +28,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-17T14:53:59.930Z"
+      "scraped_at": "2026-05-17T16:53:52.859Z"
     },
     {
       "slug": "74821",
@@ -38,7 +38,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-17T14:54:32.365Z"
+      "scraped_at": "2026-05-17T16:54:25.068Z"
     },
     {
       "slug": "74245",
@@ -48,7 +48,7 @@
       "event_location": "Easton, PA",
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "total_cs_velo": 4,
-      "scraped_at": "2026-05-17T14:54:41.398Z"
+      "scraped_at": "2026-05-17T16:54:34.065Z"
     },
     {
       "slug": "74240",
@@ -58,7 +58,7 @@
       "event_location": "Somerville, NJ",
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 2,
-      "scraped_at": "2026-05-17T14:54:50.512Z"
+      "scraped_at": "2026-05-17T16:54:43.114Z"
     },
     {
       "slug": "74464",
@@ -68,7 +68,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-17T14:55:22.912Z"
+      "scraped_at": "2026-05-17T16:55:15.328Z"
     },
     {
       "slug": "74416",
@@ -78,8 +78,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-17T14:55:55.308Z"
+      "scraped_at": "2026-05-17T16:55:47.532Z"
     }
   ],
-  "generated_at": "2026-05-17T14:55:55.337Z"
+  "generated_at": "2026-05-17T16:55:47.563Z"
 }
