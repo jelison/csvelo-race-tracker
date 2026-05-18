@@ -8,7 +8,7 @@
       "event_location": "West Chester, PA",
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T11:45:52.380Z"
+      "scraped_at": "2026-05-18T15:18:14.369Z"
     },
     {
       "slug": "74437",
@@ -18,7 +18,7 @@
       "event_location": "Breinigsville, PA",
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T11:46:01.308Z"
+      "scraped_at": "2026-05-18T15:18:23.133Z"
     },
     {
       "slug": "74821",
@@ -28,7 +28,7 @@
       "event_location": "Plainfield, NJ",
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T11:46:10.351Z"
+      "scraped_at": "2026-05-18T15:18:31.957Z"
     },
     {
       "slug": "74245",
@@ -38,7 +38,7 @@
       "event_location": "Easton, PA",
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "total_cs_velo": 5,
-      "scraped_at": "2026-05-18T11:46:19.445Z"
+      "scraped_at": "2026-05-18T15:18:40.818Z"
     },
     {
       "slug": "74240",
@@ -48,7 +48,7 @@
       "event_location": "Somerville, NJ",
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T11:46:28.518Z"
+      "scraped_at": "2026-05-18T15:18:49.751Z"
     },
     {
       "slug": "74464",
@@ -58,7 +58,7 @@
       "event_location": "Conshohocken, PA",
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T11:46:37.551Z"
+      "scraped_at": "2026-05-18T15:18:58.583Z"
     },
     {
       "slug": "74416",
@@ -68,8 +68,8 @@
       "event_location": "Piscataway, NJ",
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T11:46:46.538Z"
+      "scraped_at": "2026-05-18T15:19:07.534Z"
     }
   ],
-  "generated_at": "2026-05-18T11:46:46.581Z"
+  "generated_at": "2026-05-18T15:19:07.569Z"
 }
