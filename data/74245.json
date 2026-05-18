@@ -4,7 +4,7 @@
   "event_location": "Easton, PA",
   "bikereg_url": "https://www.bikereg.com/eastoncrit",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74245",
-  "total_cs_velo": 5,
+  "total_cs_velo": 4,
   "fields": [
     {
       "field": "Master's Men 40 Category 14",
@@ -20,11 +20,10 @@
       "field": "Men 2/3",
       "time": null,
       "riders": [
-        "Nicholas Basalyga",
         "Jon Elison"
       ],
-      "cs_velo_count": 2
+      "cs_velo_count": 1
     }
   ],
-  "scraped_at": "2026-05-18T15:18:40.818Z"
+  "scraped_at": "2026-05-18T17:56:45.454Z"
 }
