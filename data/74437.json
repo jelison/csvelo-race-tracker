@@ -1,11 +1,19 @@
 {
   "event_name": "Snickelfritz Points Crit",
   "event_date": "May 22, 2026",
-  "event_location": null,
+  "event_location": "Breinigsville, PA",
   "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74437",
-  "total_cs_velo": 0,
-  "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-05-17T22:50:01.564Z"
+  "total_cs_velo": 1,
+  "fields": [
+    {
+      "field": "Masters Men 45",
+      "time": null,
+      "riders": [
+        "John Rachfal"
+      ],
+      "cs_velo_count": 1
+    }
+  ],
+  "scraped_at": "2026-05-18T02:47:12.419Z"
 }
