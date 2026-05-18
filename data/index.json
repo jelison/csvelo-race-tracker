@@ -5,10 +5,10 @@
       "filename": "75621.json",
       "event_name": "Pocopscon Road Race",
       "event_date": "May 17, 2026",
-      "event_location": "West Chester, PA",
+      "event_location": null,
       "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
-      "total_cs_velo": 4,
-      "scraped_at": "2026-05-18T02:47:03.429Z"
+      "total_cs_velo": 0,
+      "scraped_at": "2026-05-18T08:00:22.197Z"
     },
     {
       "slug": "74437",
@@ -18,7 +18,7 @@
       "event_location": "Breinigsville, PA",
       "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
       "total_cs_velo": 1,
-      "scraped_at": "2026-05-18T02:47:12.419Z"
+      "scraped_at": "2026-05-18T08:00:42.046Z"
     },
     {
       "slug": "74821",
@@ -28,7 +28,7 @@
       "event_location": "Plainfield, NJ",
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T02:47:21.446Z"
+      "scraped_at": "2026-05-18T08:00:51.352Z"
     },
     {
       "slug": "74245",
@@ -38,27 +38,27 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T02:47:53.661Z"
+      "scraped_at": "2026-05-18T08:01:36.766Z"
     },
     {
       "slug": "74240",
       "filename": "74240.json",
       "event_name": "Tour of Somerville",
       "event_date": "May 25, 2026",
-      "event_location": null,
+      "event_location": "Somerville, NJ",
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T02:48:25.869Z"
+      "scraped_at": "2026-05-18T08:01:56.963Z"
     },
     {
       "slug": "74464",
       "filename": "74464.json",
       "event_name": "Conshy Classic",
       "event_date": "June 6, 2026",
-      "event_location": "Conshohocken, PA",
+      "event_location": null,
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
-      "total_cs_velo": 1,
-      "scraped_at": "2026-05-18T02:48:34.862Z"
+      "total_cs_velo": 0,
+      "scraped_at": "2026-05-18T08:02:34.695Z"
     },
     {
       "slug": "74416",
@@ -68,8 +68,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-18T02:49:07.091Z"
+      "scraped_at": "2026-05-18T08:03:17.508Z"
     }
   ],
-  "generated_at": "2026-05-18T02:49:07.132Z"
+  "generated_at": "2026-05-18T08:03:17.536Z"
 }
