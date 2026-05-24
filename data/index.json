@@ -1,16 +1,6 @@
 {
   "events": [
     {
-      "slug": "74437",
-      "filename": "74437.json",
-      "event_name": "Snickelfritz Points Crit",
-      "event_date": "May 22, 2026",
-      "event_location": "Breinigsville, PA",
-      "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
-      "total_cs_velo": 4,
-      "scraped_at": "2026-05-23T22:48:06.774Z"
-    },
-    {
       "slug": "74821",
       "filename": "74821.json",
       "event_name": "Tour of Plainfield",
@@ -18,7 +8,7 @@
       "event_location": "Plainfield, NJ",
       "bikereg_url": "https://www.bikereg.com/plainfield",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-23T22:48:15.798Z"
+      "scraped_at": "2026-05-24T02:44:21.960Z"
     },
     {
       "slug": "74245",
@@ -28,7 +18,7 @@
       "event_location": "Easton, PA",
       "bikereg_url": "https://www.bikereg.com/eastoncrit",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-23T22:48:24.882Z"
+      "scraped_at": "2026-05-24T02:44:31.406Z"
     },
     {
       "slug": "74240",
@@ -38,7 +28,7 @@
       "event_location": "Somerville, NJ",
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-23T22:48:34.059Z"
+      "scraped_at": "2026-05-24T02:45:04.178Z"
     },
     {
       "slug": "74464",
@@ -48,7 +38,7 @@
       "event_location": "Conshohocken, PA",
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-23T22:48:43.082Z"
+      "scraped_at": "2026-05-24T02:45:13.666Z"
     },
     {
       "slug": "74416",
@@ -58,8 +48,8 @@
       "event_location": "Piscataway, NJ",
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-23T22:48:52.060Z"
+      "scraped_at": "2026-05-24T02:45:23.080Z"
     }
   ],
-  "generated_at": "2026-05-23T22:48:52.101Z"
+  "generated_at": "2026-05-24T02:45:23.123Z"
 }
