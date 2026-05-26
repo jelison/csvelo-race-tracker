@@ -8,7 +8,7 @@
       "event_location": "Somerville, NJ",
       "bikereg_url": "https://www.bikereg.com/tourofsomerville",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-26T02:41:59.881Z"
+      "scraped_at": "2026-05-26T07:42:24.650Z"
     },
     {
       "slug": "74464",
@@ -18,7 +18,7 @@
       "event_location": "Conshohocken, PA",
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-26T02:42:09.217Z"
+      "scraped_at": "2026-05-26T07:42:33.652Z"
     },
     {
       "slug": "74416",
@@ -28,8 +28,8 @@
       "event_location": "Piscataway, NJ",
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-26T02:42:18.539Z"
+      "scraped_at": "2026-05-26T07:42:42.655Z"
     }
   ],
-  "generated_at": "2026-05-26T02:42:18.580Z"
+  "generated_at": "2026-05-26T07:42:42.693Z"
 }
