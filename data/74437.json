@@ -4,7 +4,26 @@
   "event_location": "Breinigsville, PA",
   "bikereg_url": "https://www.bikereg.com/snickelfritz-points-crit",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74437",
-  "total_cs_velo": 0,
-  "fields": [],
-  "scraped_at": "2026-05-26T18:22:35.710Z"
+  "total_cs_velo": 4,
+  "fields": [
+    {
+      "field": "Masters Men 45",
+      "time": null,
+      "riders": [
+        "John Rachfal",
+        "Joseph Secoges"
+      ],
+      "cs_velo_count": 2
+    },
+    {
+      "field": "Men P/1/2/3",
+      "time": null,
+      "riders": [
+        "Jon Elison",
+        "Joseph Secoges"
+      ],
+      "cs_velo_count": 2
+    }
+  ],
+  "scraped_at": "2026-05-26T21:40:33.312Z"
 }
