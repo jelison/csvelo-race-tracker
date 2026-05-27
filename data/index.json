@@ -8,7 +8,7 @@
       "event_location": "Conshohocken, PA",
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
       "total_cs_velo": 1,
-      "scraped_at": "2026-05-27T02:53:06.030Z"
+      "scraped_at": "2026-05-27T08:01:18.259Z"
     },
     {
       "slug": "74416",
@@ -18,8 +18,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-27T02:53:38.406Z"
+      "scraped_at": "2026-05-27T08:01:50.588Z"
     }
   ],
-  "generated_at": "2026-05-27T02:53:38.454Z"
+  "generated_at": "2026-05-27T08:01:50.622Z"
 }
