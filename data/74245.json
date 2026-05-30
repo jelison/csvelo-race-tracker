@@ -1,29 +1,11 @@
 {
   "event_name": "Easton Criterium",
   "event_date": "May 24, 2026",
-  "event_location": "Easton, PA",
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/eastoncrit",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74245",
-  "total_cs_velo": 4,
-  "fields": [
-    {
-      "field": "Master's Men 40 Category 14",
-      "time": null,
-      "riders": [
-        "Dustin Armstrong",
-        "Jon Elison",
-        "John Rachfal"
-      ],
-      "cs_velo_count": 3
-    },
-    {
-      "field": "Men 2/3 presented by Unity Bank",
-      "time": null,
-      "riders": [
-        "Jon Elison"
-      ],
-      "cs_velo_count": 1
-    }
-  ],
-  "scraped_at": "2026-05-30T15:04:33.916Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "cloudflare_blocked": true,
+  "scraped_at": "2026-05-30T16:58:51.562Z"
 }
