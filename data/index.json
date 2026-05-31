@@ -8,7 +8,7 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-31T15:18:30.681Z"
+      "scraped_at": "2026-05-31T17:04:29.507Z"
     },
     {
       "slug": "74416",
@@ -18,8 +18,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-05-31T15:19:02.949Z"
+      "scraped_at": "2026-05-31T17:05:01.888Z"
     }
   ],
-  "generated_at": "2026-05-31T15:19:02.987Z"
+  "generated_at": "2026-05-31T17:05:01.924Z"
 }
