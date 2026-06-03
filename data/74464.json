@@ -4,8 +4,16 @@
   "event_location": "Conshohocken, PA",
   "bikereg_url": "https://www.bikereg.com/conshy-classic",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74464",
-  "total_cs_velo": 3,
+  "total_cs_velo": 4,
   "fields": [
+    {
+      "field": "The Spire Capital Masters Men 35",
+      "time": null,
+      "riders": [
+        "Jon Elison"
+      ],
+      "cs_velo_count": 1
+    },
     {
       "field": "The Keystone Outdoor Masters Men 45",
       "time": null,
@@ -17,5 +25,5 @@
       "cs_velo_count": 3
     }
   ],
-  "scraped_at": "2026-06-03T08:53:39.195Z"
+  "scraped_at": "2026-06-03T14:27:35.145Z"
 }
