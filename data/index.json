@@ -5,10 +5,10 @@
       "filename": "74464.json",
       "event_name": "Conshy Classic",
       "event_date": "June 6, 2026",
-      "event_location": "Conshohocken, PA",
+      "event_location": null,
       "bikereg_url": "https://www.bikereg.com/conshy-classic",
-      "total_cs_velo": 4,
-      "scraped_at": "2026-06-03T14:27:35.145Z"
+      "total_cs_velo": 0,
+      "scraped_at": "2026-06-03T19:47:12.618Z"
     },
     {
       "slug": "74416",
@@ -18,8 +18,8 @@
       "event_location": null,
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-06-03T14:28:07.418Z"
+      "scraped_at": "2026-06-03T19:47:44.983Z"
     }
   ],
-  "generated_at": "2026-06-03T14:28:07.457Z"
+  "generated_at": "2026-06-03T19:47:45.020Z"
 }

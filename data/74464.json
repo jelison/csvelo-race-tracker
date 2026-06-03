@@ -1,29 +1,11 @@
 {
   "event_name": "Conshy Classic",
   "event_date": "June 6, 2026",
-  "event_location": "Conshohocken, PA",
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/conshy-classic",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74464",
-  "total_cs_velo": 4,
-  "fields": [
-    {
-      "field": "The Spire Capital Masters Men 35",
-      "time": null,
-      "riders": [
-        "Jon Elison"
-      ],
-      "cs_velo_count": 1
-    },
-    {
-      "field": "The Keystone Outdoor Masters Men 45",
-      "time": null,
-      "riders": [
-        "Dustin Armstrong",
-        "John Rachfal",
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 3
-    }
-  ],
-  "scraped_at": "2026-06-03T14:27:35.145Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "cloudflare_blocked": true,
+  "scraped_at": "2026-06-03T19:47:12.618Z"
 }
