@@ -5,11 +5,11 @@
       "filename": "74416.json",
       "event_name": "Watermelon Crit",
       "event_date": "June 7, 2026",
-      "event_location": "Piscataway, NJ",
+      "event_location": null,
       "bikereg_url": "https://www.bikereg.com/the-watermelon-criterium",
       "total_cs_velo": 0,
-      "scraped_at": "2026-06-08T08:51:47.793Z"
+      "scraped_at": "2026-06-08T14:05:51.774Z"
     }
   ],
-  "generated_at": "2026-06-08T08:51:47.832Z"
+  "generated_at": "2026-06-08T14:05:51.815Z"
 }
