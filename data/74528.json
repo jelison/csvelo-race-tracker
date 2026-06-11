@@ -1,37 +1,11 @@
 {
   "event_name": "Wilmington Grand Prix",
   "event_date": "May 16, 2026",
-  "event_location": "Wilmington, DE",
+  "event_location": null,
   "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74528",
-  "total_cs_velo": 5,
-  "fields": [
-    {
-      "field": "Men's Masters 40",
-      "time": null,
-      "riders": [
-        "Dustin Armstrong",
-        "Jon Elison"
-      ],
-      "cs_velo_count": 2
-    },
-    {
-      "field": "Men's Masters 50",
-      "time": null,
-      "riders": [
-        "John Rachfal",
-        "Joseph Secoges"
-      ],
-      "cs_velo_count": 2
-    },
-    {
-      "field": "Men's IIIIV",
-      "time": null,
-      "riders": [
-        "Johnny Archer"
-      ],
-      "cs_velo_count": 1
-    }
-  ],
-  "scraped_at": "2026-06-11T08:39:50.843Z"
+  "total_cs_velo": 0,
+  "fields": [],
+  "cloudflare_blocked": true,
+  "scraped_at": "2026-06-11T13:56:18.308Z"
 }
