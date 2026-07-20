@@ -1,11 +1,10 @@
 {
   "event_name": "Tour of Somerville",
   "event_date": "May 25, 2026",
-  "event_location": null,
+  "event_location": "Somerville, NJ",
   "bikereg_url": "https://www.bikereg.com/tourofsomerville",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74240",
   "total_cs_velo": 0,
   "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-07-20T06:43:53.009Z"
+  "scraped_at": "2026-07-20T10:47:54.830Z"
 }
