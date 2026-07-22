@@ -1,11 +1,10 @@
 {
   "event_name": "Pocopscon Road Race",
   "event_date": "May 17, 2026",
-  "event_location": null,
+  "event_location": "West Chester, PA",
   "bikereg_url": "https://www.bikereg.com/pocopson-road-race",
   "confirmed_url": "https://www.bikereg.com/Confirmed/75621",
   "total_cs_velo": 0,
   "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-07-22T15:29:47.718Z"
+  "scraped_at": "2026-07-22T17:12:26.310Z"
 }
