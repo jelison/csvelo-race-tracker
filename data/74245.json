@@ -1,11 +1,10 @@
 {
   "event_name": "Easton Criterium",
   "event_date": "May 24, 2026",
-  "event_location": null,
+  "event_location": "Easton, PA",
   "bikereg_url": "https://www.bikereg.com/eastoncrit",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74245",
   "total_cs_velo": 0,
   "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-08-09T01:15:20.552Z"
+  "scraped_at": "2026-08-09T03:30:38.077Z"
 }
