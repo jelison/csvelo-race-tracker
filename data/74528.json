@@ -1,11 +1,10 @@
 {
   "event_name": "Wilmington Grand Prix",
   "event_date": "May 16, 2026",
-  "event_location": null,
+  "event_location": "Wilmington, DE",
   "bikereg_url": "https://www.bikereg.com/wilmington-grand-prix",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74528",
   "total_cs_velo": 0,
   "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-08-12T01:22:24.986Z"
+  "scraped_at": "2026-08-12T04:01:34.973Z"
 }
