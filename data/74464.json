@@ -1,11 +1,10 @@
 {
   "event_name": "Conshy Classic",
   "event_date": "June 6, 2026",
-  "event_location": null,
+  "event_location": "Conshohocken, PA",
   "bikereg_url": "https://www.bikereg.com/conshy-classic",
   "confirmed_url": "https://www.bikereg.com/Confirmed/74464",
   "total_cs_velo": 0,
   "fields": [],
-  "cloudflare_blocked": true,
-  "scraped_at": "2026-08-22T22:18:30.523Z"
+  "scraped_at": "2026-08-23T01:00:27.228Z"
 }
