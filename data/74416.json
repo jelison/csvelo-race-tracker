@@ -6,5 +6,6 @@
   "confirmed_url": "https://www.bikereg.com/Confirmed/74416",
   "total_cs_velo": 0,
   "fields": [],
-  "scraped_at": "2026-11-23T02:12:29.925Z"
+  "cloudflare_blocked": true,
+  "scraped_at": "2026-11-23T14:01:30.244Z"
 }
